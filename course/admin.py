@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from course.models import Chapter, Choice, Course, Question
+
+admin.site.register(Chapter)
+admin.site.register(Choice)
+admin.site.register(Course)
+admin.site.register(Question)
