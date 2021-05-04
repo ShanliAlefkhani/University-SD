@@ -12,7 +12,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Person
-        fields = ['user', 'username', 'password', 'name', 'surname', 'birthday', 'gender']
+        fields = ['user', 'username', 'password', 'name', 'surname', 'email', 'birthday', 'gender']
 
     def create(self, validated_data):
         with transaction.atomic():
