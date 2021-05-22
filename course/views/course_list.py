@@ -5,5 +5,5 @@ from course.serializers import CourseSerializer
 
 
 class CourseList(generics.ListAPIView):
-    queryset = Course
+    queryset = Course.objects.all()
     serializer_class = CourseSerializer

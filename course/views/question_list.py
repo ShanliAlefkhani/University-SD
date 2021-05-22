@@ -5,5 +5,5 @@ from course.serializers import QuestionSerializer
 
 
 class QuestionList(generics.ListAPIView):
-    queryset = Question
+    queryset = Question.objects.all()
     serializer_class = QuestionSerializer
