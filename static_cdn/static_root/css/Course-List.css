@@ -1,0 +1,130 @@
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: justify;
+    font-size: 1.15em;
+    line-height:1.5;
+    background: #181818;
+}
+.top {
+    width: 100%;
+    background-color: #181818;
+}
+a {
+    text-decoration: none;
+}
+.LogIn {
+    font-size: 15px;
+    background-color: #181818;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: rgb(233, 180, 8);
+    color: rgb(233, 180, 8);
+    float: right;
+}
+.navbar {
+    width: auto;
+    overflow: hidden;
+    background-color: #333;
+} 
+.navbar a {
+    float: right;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} 
+.subnav {
+    float: right;
+    overflow: hidden;
+} 
+.subnav .subnavbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+} 
+.navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: rgb(233, 180, 8);
+}
+.subnav-content {
+    display: none;
+    position: relative;
+    left: 0;
+    background-color: rgb(233, 180, 8);
+    width: 100%;
+    z-index: 1;
+} 
+.subnav-content a {
+    float: right;
+    color: white;
+    text-decoration: none;
+}
+.subnav-content a:hover {
+    background-color: black;
+    color: rgb(233, 180, 8);
+}
+.subnav:hover .subnav-content {
+    display: block;
+}
+.sidenav {
+    height: 100%;
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: auto;
+    left: auto;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(233, 180, 8);
+    display: block;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 20px 10px;
+}
+/*@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}*/
+.boxed {
+    border: 1px solid rgb(233, 180, 8) ;
+    padding: 5mm;
+    font-size: 20px;
+}
+/*.NavSideBar {
+    height: 100%;
+    width: 250px;
+    font-weight: bold;
+    display: none;
+    left: 0;
+    background-color: rgb(233, 180, 8);
+    position: fixed;
+    z-index: 3;
+    overflow: auto;
+    text-align: center;
+    padding: 8px 16px;
+    animation: animateleft 0.4s;
+}
+@keyframes animateleft {
+    from {
+        left:-300px;opacity:0
+    } 
+    to {
+        left:0;opacity:1
+    }
+}
