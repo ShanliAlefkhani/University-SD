@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tutorial</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link href={% static "css/Course-List.css"%} rel="stylesheet" type="text/css">
+        <link href="../icons8-puzzle-64.png" rel="icon">
+    </head>
+    <body>
+        <div class="top">
+            <a href="#" style="font-size: 30px; color: rgb(233, 180, 8);">Software Design Project</a>
+            <button class="LogIn">LogIn</button>
+        </div>
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <div class="subnav">
+                <button class="subnavbtn">About<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="#team">Team</a>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">Tutorials<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="#python">Python</a>
+                </div>
+            </div>
+            <div class="subnav">
+                <button class="subnavbtn">contest<i class="fa fa-caret-down"></i></button>
+                <div class="subnav-content">
+                    <a href="#python">Python</a>
+                </div>
+            </div> 
+        </div>
+        <div class="sidenav">
+            <a href="#chapter1">Chapter1</a>
+            <a href="#chapter2">Chapter2</a>
+            <a href="#chapter3">Chapter3</a>
+            <a href="#chapter4">Chapter4</a>
+        </div>
+
+        <div class="main">
+            <h2>Topic</h2>
+            <hr>
+            <p>Content</p>
+
+            <div class="boxed">
+                <p>Example</p>
+            </div>
+        </div>
+    </body>
+</html>
