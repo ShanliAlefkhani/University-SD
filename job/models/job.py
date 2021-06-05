@@ -4,9 +4,9 @@ from user.models import Company
 
 
 class Job(models.Model):
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    company = models.ForeignKey(Company, related_name='jobs', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
-    expire_date = models.DateField()
+    requirements = models.CharField(max_length=200, null=True)
     salary = models.IntegerField(default=0)
     working_hours = models.IntegerField()
 
