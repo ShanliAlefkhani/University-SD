@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'course',
     'user',
-    'job',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
