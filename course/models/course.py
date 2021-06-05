@@ -1,8 +1,6 @@
 from django.db import models
 
-from course.models.page import Page
 
-
-class Course(Page):
-    course_text = models.TextField()
-    code_example = models.TextField()
+class Course(models.Model):
+    course_name = models.CharField(max_length=100)
+    description = models.CharField(max_length=200)
