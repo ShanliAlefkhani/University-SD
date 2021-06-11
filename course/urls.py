@@ -1,6 +1,6 @@
 from django.urls import path
 
-from course.views import ChapterList, ChoiceList, LessonList, QuestionList, CourseList
+from course.views import ChapterList, ChoiceList, LessonList, QuestionList, CourseList, ChapterDetailView
 
 urlpatterns = [
     path('chapter-list/', ChapterList.as_view()),
@@ -8,4 +8,5 @@ urlpatterns = [
     path('lesson-list/', LessonList.as_view()),
     path('question-list/', QuestionList.as_view()),
     path('course-list/', CourseList.as_view()),
+    path('chapter-detail/<int:pk>', ChapterDetailView.as_view()),
 ]
