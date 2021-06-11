@@ -6,3 +6,4 @@ from .course_list import CourseList
 from .chapter_detail import ChapterDetailView
 from .choice_detail import ChoiceDetailView
 from .course_detail import CourseDetailView
+from .lesson_detail import LessonDetailView
