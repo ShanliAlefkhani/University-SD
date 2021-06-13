@@ -7,4 +7,4 @@ from course.serializers import CourseSerializer
 class CourseList(ListView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
-    template_name = "Course-Page/Course-List.html"
+    template_name = "Course-Page/CourseList.html"
