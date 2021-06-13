@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Courses</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href={% static "css/CourseList.css"%} rel="stylesheet" type="text/css">
+        <link href="../icons8-puzzle-64.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Courses</li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                {% for obj in object_list%}
+                    <div class="col-md-3">
+                        <div class="ibox">
+                            <div class="ibox-content course-box">
+                                <div class="course-imitation">
+                                    <img src="IMG_20210604_125837_738.png" alt="python">
+                                </div>
+                                <div class="course-desc">
+                                    <a href="#" class="course-name">{{ obj.course_name }}</a>
+                                    <div class="small m-t-xs">
+                                        <p>{{ obj.description }}</p>
+                                    </div>
+                                    <div class="m-t text-righ">
+                                        <a href="#" class="btn btn-xs btn-outline btn-primaryv viewbutton">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}    
+            </div>
+        </div>
+    </body>
+</html>
