@@ -4,8 +4,8 @@ from course.models.chapter import Chapter
 
 
 class Page(models.Model):
+    chapter = models.ForeignKey(Chapter, related_name='%(class)ss', on_delete=models.CASCADE)
     number = models.PositiveIntegerField()
-    chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE)
 
     class Meta:
         abstract = True

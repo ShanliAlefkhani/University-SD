@@ -1,4 +1,5 @@
 from .chapter import ChapterSerializer
 from .choice import ChoiceSerializer
-from .course import CourseSerializer
+from .lesson import LessonSerializer
 from .question import QuestionSerializer
+from .course import CourseSerializer
