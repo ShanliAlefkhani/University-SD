@@ -17,26 +17,26 @@
             <ul class="breadcrumb navbackground">
                 <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
                 <li class="breadcrumb-item mycolor"><a href="../CourseList/CourseList.html">Courses</a></li>
-                <li class="breadcrumb-item active" aria-current="page">obj.course_name</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ object.course_name }}</li>
             </ul>
         </nav>
 
         <div class="container">
             <br>
             <h6>Course Summary: </h6>
-            <p>obj.description</p>
+             <p>{{ object.description }}</p>
             <br>
             <hr style="background: #f5a44d;">
             <br>
             <div class="row" id="chapter-slider">
-                {% for chapter in obj.chapters%}
+                {% for chapter in object.chapters.all %}
                     <div class="col-md-3">
                         <div class="chapter">
                             <div class="chapter-content chapter-box">
                                 <div class="chapter-desc">
-                                    <a href="#" class="chapter-name">chapter.name</a>
+                                    <a href="#" class="chapter-name">{{ chapter.name }}</a>
                                     <div class="small m-t-xs">
-                                        <p>chapter.lessons.count()</p>
+                                        <p>{{ chapter.lessons.count }}</p>
                                     </div>
                                     <div class="m-t text-righ">
                                         <a href="#" class="btn btn-xs btn-outline btn-primaryv viewbutton">Info <i class="fa fa-long-arrow-right"></i> </a>
