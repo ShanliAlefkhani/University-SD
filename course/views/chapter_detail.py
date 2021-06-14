@@ -1,5 +1,5 @@
-from rest_framework import generics
 from django.views.generic.detail import DetailView
+
 from course.models import Chapter
 from course.serializers import ChapterSerializer
 
