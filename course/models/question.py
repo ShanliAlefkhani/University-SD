@@ -4,4 +4,4 @@ from course.models.page import Page
 
 
 class Question(Page):
-    question_text = models.TextField()
+    text = models.TextField()
