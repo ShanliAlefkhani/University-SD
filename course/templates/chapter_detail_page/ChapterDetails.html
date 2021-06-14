@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ object.name }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href={% static "css/ChapterDetails.css"%} rel="stylesheet" type="text/css">
+        <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/course/course-list/">Courses</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/course/course-detail/{{ object.course.id }}">{{ object.course.course_name}}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ object.name }}</li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <br>
+            <h6>Chapter Summary: </h6>
+            <p>You will learn blahblahblah in this chapter</p>
+            <br>
+            <hr style="background: #f5a44d;">
+            <br>
+            <div class="" id="chapter-slider">
+                {% for lesson in object.lessons.all %}
+                    <div class="col-md-3">
+                        <div class="chapter">
+                            <div class="chapter-content chapter-box">
+                                <div class="chapter-desc">
+                                    <a href="#" class="chapter-name">Lesson {{ lesson.number }}: {{ lesson.name }}</a>
+                                    <div class="m-t text-righ">
+                                        <a href="http://127.0.0.1:8000/course/lesson-detail/{{ lesson.id }}" class="btn btn-xs btn-outline btn-primaryv viewbutton">Lets Go <i class="fa fa-long-arrow-right"></i> </a>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                {% endfor %}
+            </div>
+            <br><br>
+            <hr>
+            <div class="col-md-3">
+                <div class="chapter">
+                    <div class="chapter-content chapter-box">
+                        <div class="chapter-desc">
+                            <a href="#" class="chapter-name">Number of questions: {{ object.questions.count }}</a>
+                            <div class="m-t text-righ">
+                                <a href="http://127.0.0.1:8000/course/question-detail/{{ object.questions.first.id }}" class="btn btn-xs btn-outline btn-primaryv viewbutton">Lets Go <i class="fa fa-long-arrow-right"></i> </a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
