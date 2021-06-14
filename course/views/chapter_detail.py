@@ -1,9 +1,10 @@
 from rest_framework import generics
-
+from django.views.generic.detail import DetailView
 from course.models import Chapter
 from course.serializers import ChapterSerializer
 
 
-class ChapterDetailView(generics.RetrieveAPIView):
+class ChapterDetailView(DetailView):
     queryset = Chapter.objects.all()
     serializer_class = ChapterSerializer
+    template_name = "ChapterDetail-page/ChapterDetails.html"
