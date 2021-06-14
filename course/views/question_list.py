@@ -1,5 +1,5 @@
-from rest_framework import generics
 from django.views.generic.list import ListView
+
 from course.models import Question
 from course.serializers import QuestionSerializer
 

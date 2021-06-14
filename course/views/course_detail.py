@@ -1,9 +1,7 @@
-from rest_framework import generics
+from django.views.generic.detail import DetailView
 
 from course.models import Course
 from course.serializers import CourseSerializer
-
-from django.views.generic.detail import DetailView
 
 
 class CourseDetailView(DetailView):
