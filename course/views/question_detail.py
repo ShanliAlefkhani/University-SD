@@ -1,4 +1,3 @@
-from rest_framework import generics
 from django.views.generic.detail import DetailView
 
 from course.models import Question
