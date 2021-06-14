@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ object.name }}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href={% static "css/Lesson.css"%}"Lesson.css" rel="stylesheet" type="text/css">
+        <link href="../icons8-puzzle-64.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="../CourseList/CourseList.html">Courses</a></li>
+                <li class="breadcrumb-item mycolor"><a href="../CourseDetail/CourseDetails.html">{{ object.chapter.course.course_name }}</a></li>
+                <li class="breadcrumb-item mycolor"><a href="../ChapterDetails/ChapterDetails.html">{{ object.chapter.name }}</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{ object.name }}</li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="main-body">            
+                <div class="row gutters-sm">
+                    <div class="card card-info">
+                        <div class="card-body">
+                            <div class="d-flex flex-column text-left">
+                                <h1>{{ object.name }}</h1>
+                                <h6 class="left" style="color : rgba(150, 144, 144, 0.767)">{{ object.chapter.course.course_name }}</h6>
+                                <h6 class="left" style="color : rgba(150, 144, 144, 0.322)">{{ object.chapter.name }}</h6>
+                                <div class="row" style="margin-left: 2px;">
+                                    <button class="btn btn-primary tagbutton">Course Category</button>
+                                </div>
+                            </div>
+                            <hr style="background-color: #f5a44d;">
+                            <div class="d-flex flex-column text-left">
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">{{ object.lesson_text }}</p>
+                            </div>
+                            <br>
+                            <div class="d-flex flex-column text-left">
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">Here is a code example:</p>
+                                <div class="left" style="color : rgba(150, 144, 144, 0.63)">
+                                    <div class="boxed">
+                                        <p>{{ object.code_example }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="background-color: #f5a44d;">
+                            <div class="d-flex flex-column text-left">
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">Now, according to the knowledge you have gained, answer some questions to go to the next lesson.</p>
+                                <a href="" class="btn btn-primary button">Lets go</a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -7,4 +7,3 @@ from course.serializers import QuestionSerializer
 class QuestionList(ListView):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
-    template_name = 'Question-Page/Question-List.html'
