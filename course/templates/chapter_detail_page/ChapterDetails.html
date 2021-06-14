@@ -46,6 +46,21 @@
                     </div>
                 {% endfor %}
             </div>
+            <br><br>
+            <hr>
+            <div class="col-md-3">
+                <div class="chapter">
+                    <div class="chapter-content chapter-box">
+                        <div class="chapter-desc">
+                            <a href="#" class="chapter-name">Number of questions: {{ object.questions.count }}</a>
+                            <div class="m-t text-righ">
+                                <a href="http://127.0.0.1:8000/course/question-detail/{{ object.questions.first.id }}" class="btn btn-xs btn-outline btn-primaryv viewbutton">Lets Go <i class="fa fa-long-arrow-right"></i> </a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

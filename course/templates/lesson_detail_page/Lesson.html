@@ -10,16 +10,16 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href={% static "css/Lesson.css"%}"Lesson.css" rel="stylesheet" type="text/css">
-        <link href="../icons8-puzzle-64.png" rel="icon">
+        <link href={% static "css/Lesson.css"%} rel="stylesheet" type="text/css">
+        <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
     </head>
     <body>
         <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
             <ul class="breadcrumb navbackground">
                 <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
-                <li class="breadcrumb-item mycolor"><a href="../CourseList/CourseList.html">Courses</a></li>
-                <li class="breadcrumb-item mycolor"><a href="../CourseDetail/CourseDetails.html">{{ object.chapter.course.course_name }}</a></li>
-                <li class="breadcrumb-item mycolor"><a href="../ChapterDetails/ChapterDetails.html">{{ object.chapter.name }}</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/course/course-list/">Courses</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/course/course-detail/{{ object.chapter.course.id }}">{{ object.chapter.course.course_name }}</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/course/chapter-detail/{{ object.chapter.id }}">{{ object.chapter.name }}</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{{ object.name }}</li>
             </ul>
         </nav>
@@ -52,7 +52,7 @@
                             </div>
                             <hr style="background-color: #f5a44d;">
                             <div class="d-flex flex-column text-left">
-                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">Now, according to the knowledge you have gained, answer some questions to go to the next lesson.</p>
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">Now, according to the knowledge you have gained, go to the next lesson.</p>
                                 <a href="" class="btn btn-primary button">Lets go</a>
                                 <br>
                             </div>
