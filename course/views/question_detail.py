@@ -7,4 +7,4 @@ from course.serializers import QuestionSerializer
 class QuestionDetailView(DetailView):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
-    template_name = 'question_detail_page/Question.html'
+    template_name = 'question_detail_page/question_detail.html'

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ object.name }}</title>
+        <title>Questions</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="Tutorial, Programming">
@@ -10,7 +10,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href={% static "css/Lesson.css"%} rel="stylesheet" type="text/css">
+        <link href={% static "css/question_detail.css"%} rel="stylesheet" type="text/css">
         <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
     </head>
     <body>
@@ -20,46 +20,39 @@
                 <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/course/course-list/">Courses</a></li>
                 <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/course/course-detail/{{ object.chapter.course.id }}">{{ object.chapter.course.name }}</a></li>
                 <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/course/chapter-detail/{{ object.chapter.id }}">{{ object.chapter.name }}</a></li>
-                <li class="breadcrumb-item active" aria-current="page">{{ object.name }}</li>
+                <li class="breadcrumb-item active" aria-current="page">Questions</li>
             </ul>
         </nav>
-
+        <br>
+        <br>
         <div class="container">
             <div class="main-body">            
                 <div class="row gutters-sm">
                     <div class="card card-info">
                         <div class="card-body">
                             <div class="d-flex flex-column text-left">
-                                <h1>{{ object.name }}</h1>
-                                <h6 class="left" style="color : rgba(150, 144, 144, 0.767)">{{ object.chapter.course.name }}</h6>
-                                <h6 class="left" style="color : rgba(150, 144, 144, 0.322)">{{ object.chapter.name }}</h6>
-                                <div class="row" style="margin-left: 2px;">
-                                    <button class="btn btn-primary tagbutton">Course Category</button>
-                                </div>
-                            </div>
-                            <hr style="background-color: #f5a44d;">
-                            <div class="d-flex flex-column text-left">
-                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">{{ object.text }}</p>
-                            </div>
-                            <br>
-                            <div class="d-flex flex-column text-left">
-                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">Here is a code example:</p>
-                                <div class="left" style="color : rgba(150, 144, 144, 0.63)">
-                                    <div class="boxed">
-                                        <p>{{ object.code_example }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr style="background-color: #f5a44d;">
-                            <div class="d-flex flex-column text-left">
-                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">Now, according to the knowledge you have gained, go to the next lesson.</p>
-                                <a href="{{ object.next }}" class="btn btn-primary button">Lets go</a>
+                                <h5 style="white-space: pre-line; color: #fff"><span class="mycolor">{{ object.number }}.</span> <samp>{{ object.text }}</samp></h5>
                                 <br>
+                                <br>
+                                <form>
+                                    {% for choice in object.choices.all %}
+                                        <input type="radio" id="answer1" name="answer" value="answer1">
+                                        <label for="answer1">{{ choice.text }}</label><br>
+                                    {% endfor %}
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div style="margin-left: 450px;">
+                <br>
+                <div class="row">
+                    <a href="#" class="btn button">Submit</a>
+                    
+                    <a href="{{ object.next }}" class="btn button">Next</a>
+                </div>
+            </div>            
         </div>
     </body>
 </html>

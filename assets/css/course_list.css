@@ -21,21 +21,45 @@ body{
 .mybackground {
     background: rgb(17, 16, 16) !important;
 }
-.chapter-box {
+
+.course-box {
     padding: 0;
     border: 1px solid #0c0c0c;
     box-shadow: 0 3px 7px 0 #f5a44d;
 }
-  .chapter-box:hover,
-  .chapter-box.active {
+  .course-box:hover,
+  .course-box.active {
     border: 1px solid transparent;
     box-shadow: 0 5px 9px 0 #fcb86f;
   }
-
-  .chapter-desc {
+  .course-imitation {
+    text-align: center;
+    background-color: #272727;
+    color: #272727;
+    font-weight: 600;
+  }
+  .course-imitation img {
+    text-align: center;
+    width: 200px;
+    height:200px;
+    background-color: #272727;
+    color: #272727;
+    font-weight: 600;
+  }
+  .cart-course-imitation {
+    text-align: center;
+    padding-top: 30px;
+    height: 80px;
+    width: 80px;
+    background-color: #272727;
+  }
+  .course-imitation.xl {
+    padding: 120px 0;
+  }
+  .course-desc {
     padding: 20px;
     position: relative;
-    height: 120px !important;
+    height: 400px !important;
   }
   .ecommerce .tag-list {
     padding: 0;
@@ -49,45 +73,43 @@ body{
   .ecommerce .note-editor {
     border: 1px solid #1f1f1f;
   }
-  .chapter-name {
+  .course-name {
     font-size: 16px;
     font-weight: 600;
     color: rgba(228, 193, 80, 0.925);
     display: block;
     margin: 2px 0 5px 0;
   }
-  .chapter-name:hover,
-  .chapter-name:focus {
+  .course-name:hover,
+  .course-name:focus {
     color: rgb(233, 180, 8);
     text-decoration:none ;
   }
-  .chapter-detail .chapter-content {
+  .course-detail .ibox-content {
     padding: 30px 30px 50px 30px;
   }
   
-  .chapter {
+  .ibox {
     clear: both;
     margin : 10px;
-    margin-left: 200px;
-    margin-bottom: 30px;
     padding: 0px;
-    height: 120px !important;
-    width: 700px !important;
+    height: 500px !important;
+    width: 250px !important;
   }
-  .chapter.collapsed .chapter-content {
+  .ibox.collapsed .ibox-content {
     display: none;
   }
-  .chapter.collapsed .fa.fa-chevron-up:before {
+  .ibox.collapsed .fa.fa-chevron-up:before {
     content: "\f078";
   }
-  .chapter.collapsed .fa.fa-chevron-down:before {
+  .ibox.collapsed .fa.fa-chevron-down:before {
     content: "\f077";
   }
-  .chapter:after,
-  .chapter:before {
+  .ibox:after,
+  .ibox:before {
     display: table;
   }
-  .chapter-title {
+  .ibox-title {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
@@ -102,22 +124,21 @@ body{
     padding: 14px 15px 7px;
     min-height: 48px;
   }
-  .chapter-content {
+  .ibox-content {
     background-color: #272727;
     color: inherit;
-    padding: 15px 20px 20px 20px;
+    padding: 12px 17px 17px 17px;
     border-color: #1f1f1f;
     border-image: none;
     border-style: solid solid none;
     border-width: 1px 0;
-    height: 120px !important;
+    height: 500px !important;
   }
-  .chapter-footer {
+  .ibox-footer {
     color: inherit;
     border-top: 1px solid #1f1f1f;
     font-size: 90%;
     background: #272727;
-    padding: 10px 15px;
   }
   .viewbutton {
     background: rgb(228, 193, 80);
@@ -125,11 +146,10 @@ body{
     border: 0px;
     padding: 5px 5px;
     border-radius: 2px;
-    width: 100px;
+    width: 100%;
     display: block;
     cursor: pointer;
     font-size: 12px;
-    float: right;
 }
 .viewbutton:hover{
     background: rgb(228, 193, 89);
@@ -137,8 +157,22 @@ body{
     border: 1px solid rgb(14, 13, 13);
     padding: 5px 5px;
     border-radius: 2px;
-    width: 100px;
+    width: 100%;
     display: block;
     cursor: pointer;
     font-size: 12px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(233, 180, 8); 
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(233, 180, 8); 
 }
