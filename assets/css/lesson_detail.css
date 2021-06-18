@@ -25,6 +25,7 @@ body{
     border: 1px solid rgb(243, 203, 71);
     padding: 5mm;
     font-size: 20px;
+    background: #2c2c2c !important;
 }
 .main-body {
     padding: 15px;
@@ -114,4 +115,29 @@ body{
     display: block;
     cursor: pointer;
     font-size: 12px;
+}
+.button:active{
+    background: rgb(240, 199, 67);
+    color: rgb(17, 16, 16) !important;
+    border: 2px solid black;
+    padding: 8px 8px;
+    border-radius: 50px;
+    width: 15%;
+    display: block;
+    cursor: pointer;
+    font-size: 12px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey; 
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(233, 180, 8); 
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(233, 180, 8); 
 }

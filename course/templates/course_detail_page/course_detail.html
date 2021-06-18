@@ -2,14 +2,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Courses Name</title>
+        <title>{{ object.name }}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="Tutorial, Programming">
         <meta name="description" content="A WebPage for Learning Programming">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href={% static "css/CourseDetails.css"%} rel="stylesheet" type="text/css">
+        <link href={% static "css/course_detail.css"%} rel="stylesheet" type="text/css">
         <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
     </head>
     <body>
@@ -21,10 +21,10 @@
             </ul>
         </nav>
 
-        <div class="container">
+        <div class="container" style="margin-top: 50px">
             <br>
-            <h6>Course Summary: </h6>
-             <p>{{ object.description }}</p>
+            <h6 class="mycolor"><i>Course Summary: </i></h6>
+            <p style="width: 100%; white-space: pre-line;">{{ object.description }}</p>
             <br>
             <hr style="background: #f5a44d;">
             <br>
@@ -36,7 +36,7 @@
                                 <div class="chapter-desc">
                                     <a href="http://127.0.0.1:8000/course/chapter-detail/{{ chapter.id }}" class="chapter-name">{{ chapter.name }}</a>
                                     <div class="small m-t-xs">
-                                        <p>{{ chapter.lessons.count }}</p>
+                                        <p><i>Number of lessons: </i><span class="mycolor">{{ chapter.lessons.count }}</span></p>
                                     </div>
                                     <div class="m-t text-righ">
                                         <a href="http://127.0.0.1:8000/course/chapter-detail/{{ chapter.id }}" class="btn btn-xs btn-outline btn-primaryv viewbutton">Info <i class="fa fa-long-arrow-right"></i> </a>

@@ -9,7 +9,7 @@
         <meta name="description" content="A WebPage for Learning Programming">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href={% static "css/ChapterDetails.css"%} rel="stylesheet" type="text/css">
+        <link href={% static "css/chapter_detail.css"%} rel="stylesheet" type="text/css">
         <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
     </head>
     <body>
@@ -22,13 +22,7 @@
             </ul>
         </nav>
 
-        <div class="container">
-            <br>
-            <h6>Chapter Summary: </h6>
-            <p>You will learn blahblahblah in this chapter</p>
-            <br>
-            <hr style="background: #f5a44d;">
-            <br>
+        <div class="container" style="margin-top: 80px;">
             <div class="" id="chapter-slider">
                 {% for lesson in object.lessons.all %}
                     <div class="col-md-3">
@@ -46,13 +40,14 @@
                     </div>
                 {% endfor %}
             </div>
-            <br><br>
-            <hr>
+            <br><br><br><br>
             <div class="col-md-3">
-                <div class="chapter">
-                    <div class="chapter-content chapter-box">
-                        <div class="chapter-desc">
-                            <a href="http://127.0.0.1:8000/course/question-detail/{{ object.questions.first.id }}" class="chapter-name">Number of questions: {{ object.questions.count }}</a>
+                <div class="quiz">
+                <hr style="background-color: rgb(228, 193, 89);">
+                    <div class="quiz-content quiz-box">
+                        <div class="quiz-desc">
+                            <a href="http://127.0.0.1:8000/course/question-detail/{{ object.questions.first.id }}" class="chapter-name">Take an Exam</a>
+                            <p>Number of Question: {{ object.questions.count }}</p>
                             <div class="m-t text-righ">
                                 <a href="http://127.0.0.1:8000/course/question-detail/{{ object.questions.first.id }}" class="btn btn-xs btn-outline btn-primaryv viewbutton">Lets Go <i class="fa fa-long-arrow-right"></i> </a>
                                 <br>

@@ -10,7 +10,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href={% static "css/CourseList.css"%} rel="stylesheet" type="text/css">
+        <link href={% static "css/course_list.css"%} rel="stylesheet" type="text/css">
         <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
     </head>
     <body>
@@ -33,9 +33,9 @@
                                 <div class="course-desc">
                                     <a href="http://127.0.0.1:8000/course/course-detail/{{ course.id }}" class="course-name">{{ course.name }}</a>
                                     <div class="small m-t-xs">
-                                        <p>{{ course.description }}</p>
+                                        <p style="font-size: 10px; white-space: pre-line;">{{ course.description }}</p>
                                     </div>
-                                    <div class="m-t text-righ">
+                                    <div class="m-t text-righ ibox-footer">
                                         <a href="http://127.0.0.1:8000/course/course-detail/{{ course.id }}" class="btn btn-xs btn-outline btn-primaryv viewbutton">Info <i class="fa fa-long-arrow-right"></i> </a>
                                     </div>
                                 </div>
