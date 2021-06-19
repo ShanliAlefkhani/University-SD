@@ -1,0 +1,138 @@
+body {
+    background: #181818;
+    color: rgb(233, 180, 8);
+    max-height: max-content;
+    margin-top: 20px;
+}
+a:link {
+    color: rgb(219, 169, 5);
+}
+a:visited {
+    color: rgb(219, 169, 5);
+}
+a:hover {
+    color: rgb(219, 169, 5);
+}
+a:active {
+    color: rgb(219, 169, 5);
+}
+.container {
+    display: flex;
+    align-items: center;
+    padding-left: 3cm;
+    width: 150%;
+    background: #181818;
+    height: auto;
+    position: relative;
+}
+.der-login {
+    width: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 40px;
+    padding: 35px;
+    max-width: 400px;
+}
+.der-login h1 {
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+.der-login .die-inputs {
+    padding-bottom: 20px;
+    width: 150%;
+}
+.der-login .die-inputs .forget {
+    width: 150%;
+    text-align: right;
+    padding: 5px;
+}
+.der-login .die-inputs .forget a {
+    text-decoration: none;
+    color: rgb(233, 180, 8);
+    font-size: .9rem;
+}
+.der-input {
+    margin-top: 10px;
+}
+.der-input input {
+    width: 150%;
+    padding: 14px 20px;
+    border: 0px;
+    background: #181818;
+    border-radius: 18px;
+    border: 2px solid rgb(233, 180, 8);
+    transition: all .25s ease;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
+}
+.btn-signup {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 0px;
+    padding: 14px 20px;
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all .25s ease;
+}
+.der-input input:focus {
+    opacity: 1;
+}
+.der-input label {
+    display: block;
+    padding-left: 8px;
+}
+.der-input select {
+    width: 150%;
+    padding: 14px 20px;
+    border: 0px;
+    background: #181818;
+    border-radius: 18px;
+    border: 2px solid rgb(233, 180, 8);
+    transition: all .25s ease;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
+    color: #f7f3f3 !important;
+  }
+  .der-input select:focus {
+    width: 150%;
+    padding: 14px 20px;
+    border: 0px;
+    background: #181818;
+    border-radius: 18px;
+    border: 2px solid rgb(233, 180, 8);
+    transition: all .25s ease;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
+    color: #f7f3f3 !important;
+  }
+  option {
+    background-color: #272727;
+    color: rgb(233, 180, 8) !important;
+  }
+  select {
+    background-color: #272727;
+    color: #f7f3f3 !important;
+  }
+footer {
+    width: 150%;
+}
+.navbackground {
+    background: #272727 !important;
+}
+.navbackground a{
+    background: #272727 !important;
+}
+.mycolor a{
+    color: rgb(233, 180, 8) !important;
+}
+.mycolor a:hover{
+    color: rgb(230, 228, 224) !important;
+}
+.mycolor {
+    color: rgb(233, 180, 8) !important;
+}
+.mybackground {
+    background: rgb(17, 16, 16) !important;
+}

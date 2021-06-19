@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Person Sign-Up</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href={% static "css/person_signup.css" %} rel="stylesheet" type="text/css">
+        <link href="../icons8-puzzle-64.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="../LogIn/login.html">Log-In</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Person Sign-Up</li>
+            </ul>
+        </nav>
+        <div class="container">   
+            <div class="die-inputs">
+                <h1>Person Sign Up</h1>
+                <div class="der-input">
+                    <label for="username">
+                        Username
+                    </label>
+                    <input placeholder="Enter Your Username" id="username" type="text">
+                </div>
+                <div class="der-input">
+                    <label for="Name">
+                        Name
+                    </label>
+                    <input placeholder="Enter Your Name" id="name" type="text">
+                </div>
+                <div class="der-input">
+                    <label for="Surname">
+                        Surname
+                    </label>
+                    <input placeholder="Enter Your Surname" id="surname" type="text">
+                </div>
+                <div class="der-input">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input placeholder="Enter Your Email Address" autocomplete="off" id="email" type="email">
+                </div>
+                <div class="der-input">
+                    <label for="github">
+                        Github
+                    </label>
+                    <input placeholder="Enter Your Github Username" autocomplete="off" id="github" type="text">
+                </div>
+                <div class="der-input">
+                    <label for="linkedin">
+                        LinkedIn
+                    </label>
+                    <input placeholder="Enter Your LinkedIn Address" autocomplete="off" id="linkedin" type="url">
+                </div>
+                <div class="der-input">
+                    <label for="birthday">
+                        Birthday
+                    </label>
+                    <input placeholder="Choose Your Birthday" id="birthday" type="date">
+                </div>
+                <div class="der-input">
+                    <label for="gender">
+                        Gender
+                    </label>
+                    <select class="der-input">
+                        <option selected="">Choose Your Gender</option>
+                        <option value="1">Female</option>
+                        <option value="2">Male</option>
+                    </select>
+                </div>
+                <div class="der-input">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input placeholder="Enter Your Password" id="password" type="password">
+                </div>
+                <br> 
+                <footer>
+                    <button class="btn-signup">Sign Up</button>
+                    <br>
+                </footer>
+            </div>  
+        </div>
+    </body>
+</html>
