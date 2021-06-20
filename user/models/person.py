@@ -15,8 +15,6 @@ class Person(models.Model):
     email = models.EmailField(max_length=100)
     birthday = models.DateField('birthday')
     gender = models.CharField(choices=GENDER_CHOICES, max_length=1)
-    github_id = models.CharField(max_length=100, null=True)
-    linkedin_id = models.CharField(max_length=100, null=True)
     courses = models.ManyToManyField(Course, related_name='persons')
 
     class Meta:

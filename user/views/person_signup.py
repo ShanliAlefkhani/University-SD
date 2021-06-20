@@ -1,6 +1,8 @@
 from django.shortcuts import render ,redirect
+from user.models.person import Person
 from user.forms.PersonSignupForm import PersonSignUpForm
 from django.contrib.auth import login, get_user_model, authenticate
+from django.contrib.auth.models import User
 
 
 def PersonSignUp(request):
@@ -8,17 +10,28 @@ def PersonSignUp(request):
         return redirect('/')
     personsignup_form = PersonSignUpForm(request.POST or None)
 
+    print(personsignup_form.is_valid())
+    print(personsignup_form)
     if personsignup_form.is_valid():
-        user_name = personsignup_form.cleaned_data.get('user_name')
+        username = personsignup_form.cleaned_data.get('username')
         name = personsignup_form.cleaned_data.get('name')
         surname = personsignup_form.cleaned_data.get('surname')
         email = personsignup_form.cleaned_data.get('email')
         birthday = personsignup_form.cleaned_data.get('birthday')
         gender = personsignup_form.cleaned_data.get('gender')
         password = personsignup_form.cleaned_data.get('password')
-        User.objects.create_user(
-            username=user_name, name=name, surname=surname, email=email, birthday=birthday, gender=gender, password=password,
+
+        user = User.objects.create(
+                username=username,
         )
+        user.set_password(password)
+        user.save()
+
+        Person.objects.create(
+            user=user, name=name, surname=surname, email=email, birthday=birthday, gender=gender,
+        )
+        
+        
         return redirect('/login')
 
     context = {
