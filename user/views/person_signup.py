@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
-from user.forms.PersonSignupForm import PersonSignUpForm
+from user.forms.person_signup import PersonSignUpForm
 from user.models.person import Person
 
 
