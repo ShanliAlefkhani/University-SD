@@ -1,12 +1,7 @@
 from django import forms
-from django.contrib.auth.models import User
-from django.core import validators
 
+from user.models import Person
 
-Gender_Choices =(
-    ('Female','Female'),
-    ('Male','Male')
-)
 
 class PersonSignUpForm(forms.Form):
     username = forms.CharField(
@@ -35,14 +30,11 @@ class PersonSignUpForm(forms.Form):
     )
 
     gender = forms.CharField(
-        widget=forms.Select(choices=Gender_Choices),
-        label = 'Gender'
+        widget=forms.Select(choices=Person.GENDER_CHOICES),
+        label='Gender'
     )
 
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={'placeholder': 'Enter Your Password'}),
         label='Password'
     )
-
-
-    
