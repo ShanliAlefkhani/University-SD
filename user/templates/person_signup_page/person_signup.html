@@ -9,7 +9,7 @@
         <meta name="description" content="A WebPage for Learning Programming">
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href={% static "css/person_signup.css" %} rel="stylesheet" type="text/css">
-        <link href="../icons8-puzzle-64.png" rel="icon">
+        <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
     </head>
     <body>
         <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
@@ -25,42 +25,43 @@
                 <div class="der-input">
                     <form method="POST">
                         {% csrf_token %}
-                        <label for="{{ personsignup_form.username.id_for_label }}">
-                            {{ personsignup_form.username.label }}
+                        <label for="{{ person_signup_form.username.id_for_label }}">
+                            {{ person_signup_form.username.label }}
                         </label>
-                        {{ personsignup_form.username }}
-                        <label for="{{ personsignup_form.name.id_for_label }}">
-                            {{ personsignup_form.name.label }}
+                        {{ person_signup_form.username }}
+                        <label for="{{ person_signup_form.name.id_for_label }}">
+                            {{ person_signup_form.name.label }}
                         </label>
-                        {{ personsignup_form.name }}
-                        <label for="{{ personsignup_form.surname.id_for_label }}">
-                            {{ personsignup_form.surname.label }}
+                        {{ person_signup_form.name }}
+                        <label for="{{ person_signup_form.surname.id_for_label }}">
+                            {{ person_signup_form.surname.label }}
                         </label>
-                        {{ personsignup_form.surname }}
-                        <label for="{{ personsignup_form.email.id_for_label }}">
-                            {{ personsignup_form.email.label }}
+                        {{ person_signup_form.surname }}
+                        <label for="{{ person_signup_form.email.id_for_label }}">
+                            {{ person_signup_form.email.label }}
                         </label>
-                        {{ personsignup_form.email }}
-                        <label for="{{ personsignup_form.birthday.id_for_label }}">
-                            {{ personsignup_form.birthday.label }}
+                        {{ person_signup_form.email }}
+                        <label for="{{ person_signup_form.birthday.id_for_label }}">
+                            {{ person_signup_form.birthday.label }}
                         </label>
-                        {{ personsignup_form.birthday }}
-                        <label for="{{ personsignup_form.gender.id_for_label }}">
-                            {{ personsignup_form.gender.label }}
+                        {{ person_signup_form.birthday }}
+                        <label for="{{ person_signup_form.gender.id_for_label }}">
+                            {{ person_signup_form.gender.label }}
                         </label>
-                        {{ personsignup_form.gender }}
-                        <label for="{{ personsignup_form.password.id_for_label }}">
-                            {{ personsignup_form.password.label }}
+                        {{ person_signup_form.gender }}
+                        <label for="{{ person_signup_form.password.id_for_label }}">
+                            {{ person_signup_form.password.label }}
                         </label>
-                        {{ personsignup_form.password }}
+                        {{ person_signup_form.password }}
                        <br> 
                        <br>
                        <footer>
                             <button type="submit" class="btn-signup">Sign Up</button>
                             <br>
-                        </footer>
+                       </footer>
                     </form>
                 </div>  
             </div>
+        </div>
     </body>
 </html>
