@@ -7,7 +7,8 @@ from course.models import Course
 class Person(models.Model):
     GENDER_CHOICES = (
         ('F', 'Female'),
-        ('M', 'Male')
+        ('M', 'Male'),
+        ('O', 'Other'),
     )
     user = models.OneToOneField(User, related_name='person', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)

@@ -1,2 +1,2 @@
-from .person_signup import PersonSignUp
+from .person_signup import person_signup
 from .profile import Profile, ProfileUpdate

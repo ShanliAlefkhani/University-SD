@@ -1,9 +1,39 @@
 from django.contrib.auth.models import User
-from rest_framework import generics
+from django.shortcuts import render, redirect
 
-from user.serializers import PersonSerializer
+from user.forms.person_signup import PersonSignUpForm
+from user.models.person import Person
 
 
-class PersonSignUp(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = PersonSerializer
+def person_signup(request):
+    if request.user.is_authenticated:
+        return redirect('/')
+    person_signup_form = PersonSignUpForm(request.POST or None)
+
+    print(person_signup_form.is_valid())
+    print(person_signup_form)
+    if person_signup_form.is_valid():
+        username = person_signup_form.cleaned_data.get('username')
+        name = person_signup_form.cleaned_data.get('name')
+        surname = person_signup_form.cleaned_data.get('surname')
+        email = person_signup_form.cleaned_data.get('email')
+        birthday = person_signup_form.cleaned_data.get('birthday')
+        gender = person_signup_form.cleaned_data.get('gender')
+        password = person_signup_form.cleaned_data.get('password')
+
+        user = User.objects.create(
+                username=username,
+        )
+        user.set_password(password)
+        user.save()
+
+        Person.objects.create(
+            user=user, name=name, surname=surname, email=email, birthday=birthday, gender=gender,
+        )
+
+        return redirect('/login')
+
+    context = {
+        'person_signup_form': person_signup_form
+    }
+    return render(request, 'person_signup_page/person_signup.html', context)
