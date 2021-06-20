@@ -25,12 +25,12 @@ class PersonSignUpForm(forms.Form):
     )
 
     email = forms.CharField(
-        widget=forms.TextInput(attrs={'placeholder': 'Enter Your Email'}),
+        widget=forms.EmailInput(attrs={'placeholder': 'Enter Your Email'}),
         label='Email',
     )
 
     birthday = forms.DateField(
-        widget= forms.SelectDateWidget,
+        widget=forms.widgets.DateInput(attrs={'type': 'date'}),
         label='Birthday'
     )
 

@@ -23,69 +23,44 @@
             <div class="die-inputs">
                 <h1>Person Sign Up</h1>
                 <div class="der-input">
-                    <label for="username">
-                        Username
-                    </label>
-                    <input placeholder="Enter Your Username" id="username" type="text">
-                </div>
-                <div class="der-input">
-                    <label for="Name">
-                        Name
-                    </label>
-                    <input placeholder="Enter Your Name" id="name" type="text">
-                </div>
-                <div class="der-input">
-                    <label for="Surname">
-                        Surname
-                    </label>
-                    <input placeholder="Enter Your Surname" id="surname" type="text">
-                </div>
-                <div class="der-input">
-                    <label for="email">
-                        Email
-                    </label>
-                    <input placeholder="Enter Your Email Address" autocomplete="off" id="email" type="email">
-                </div>
-                <div class="der-input">
-                    <label for="github">
-                        Github
-                    </label>
-                    <input placeholder="Enter Your Github Username" autocomplete="off" id="github" type="text">
-                </div>
-                <div class="der-input">
-                    <label for="linkedin">
-                        LinkedIn
-                    </label>
-                    <input placeholder="Enter Your LinkedIn Address" autocomplete="off" id="linkedin" type="url">
-                </div>
-                <div class="der-input">
-                    <label for="birthday">
-                        Birthday
-                    </label>
-                    <input placeholder="Choose Your Birthday" id="birthday" type="date">
-                </div>
-                <div class="der-input">
-                    <label for="gender">
-                        Gender
-                    </label>
-                    <select class="der-input">
-                        <option selected="">Choose Your Gender</option>
-                        <option value="1">Female</option>
-                        <option value="2">Male</option>
-                    </select>
-                </div>
-                <div class="der-input">
-                    <label for="password">
-                        Password
-                    </label>
-                    <input placeholder="Enter Your Password" id="password" type="password">
-                </div>
-                <br> 
-                <footer>
-                    <button class="btn-signup">Sign Up</button>
-                    <br>
-                </footer>
-            </div>  
-        </div>
+                    <form method="POST">
+                        {% csrf_token %}
+                        <label for="{{ personsignup_form.username.id_for_label }}">
+                            {{ personsignup_form.username.label }}
+                        </label>
+                        {{ personsignup_form.username }}
+                        <label for="{{ personsignup_form.name.id_for_label }}">
+                            {{ personsignup_form.name.label }}
+                        </label>
+                        {{ personsignup_form.name }}
+                        <label for="{{ personsignup_form.surname.id_for_label }}">
+                            {{ personsignup_form.surname.label }}
+                        </label>
+                        {{ personsignup_form.name }}
+                        <label for="{{ personsignup_form.email.id_for_label }}">
+                            {{ personsignup_form.email.label }}
+                        </label>
+                        {{ personsignup_form.email }}
+                        <label for="{{ personsignup_form.birthday.id_for_label }}">
+                            {{ personsignup_form.birthday.label }}
+                        </label>
+                        {{ personsignup_form.birthday }}
+                        <label for="{{ personsignup_form.gender.id_for_label }}">
+                            {{ personsignup_form.gender.label }}
+                        </label>
+                        {{ personsignup_form.gender }}
+                        <label for="{{ personsignup_form.password.id_for_label }}">
+                            {{ personsignup_form.password.label }}
+                        </label>
+                        {{ personsignup_form.password }}
+                       <br> 
+                       <br>
+                       <footer>
+                            <button type="submit" class="btn-signup">Sign Up</button>
+                            <br>
+                        </footer>
+                    </form>
+                </div>  
+            </div>
     </body>
 </html>
