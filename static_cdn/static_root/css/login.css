@@ -1,0 +1,170 @@
+body {
+    background: #181818;
+    color: rgb(233, 180, 8);
+    margin-top: 20px;
+}
+a:link {
+    color: #fff;
+}
+a:visited {
+    color: #fff;
+}
+a:hover {
+    color: black;
+}
+a:active {
+    color: black;
+}
+.container {
+    display: flex;
+    align-items: center;
+    padding-left: 3cm;
+    width: 100%;
+    background: #181818;
+    height: auto;
+    position: relative;
+}
+.der-login {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 40px;
+    padding: 35px;
+    max-width: 400px;
+}
+.der-login h1 {
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+.der-login .die-inputs {
+    padding-bottom: 20px;
+    width: 100%;
+}
+.der-login .die-inputs .forget {
+    width: 100%;
+    text-align: right;
+    padding: 5px;
+}
+.der-login .die-inputs .forget a {
+    text-decoration: none;
+    color: rgb(233, 180, 8);
+    font-size: .9rem;
+}
+.der-input {
+    margin-top: 10px;
+}
+.der-input input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 0px;
+    background: #181818;
+    border-radius: 18px;
+    border: 2px solid rgb(233, 180, 8);
+    transition: all .25s ease;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
+}
+.der-input input:focus {
+    width: 100%;
+    padding: 14px 20px;
+    border: 0px;
+    background: #181818;
+    border-radius: 18px;
+    border: 2px solid rgb(233, 180, 8);
+    transition: all .25s ease;
+    opacity: .2;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
+}
+.btn-login {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 0px;
+    padding: 14px 20px;
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all .25s ease;
+}
+.btn-login :hover {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 2px solid black;
+    padding: 14px 20px;
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all .25s ease;
+}
+.btn-signup {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 0px;
+    padding: 14px 20px;
+    border-radius: 18px;
+    width: 150px;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all .25s ease;
+    margin: 3px;
+}
+.btn-signup :active {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 0px;
+    padding: 14px 20px;
+    border-radius: 18px;
+    width: 150px;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all .25s ease;
+    margin: 3px;
+}
+.btn-signup :hover {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 0px;
+    padding: 14px 20px;
+    border-radius: 18px;
+    width: 100px;
+    display: block;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all .25s ease;
+    margin: 3px;
+}
+.der-input input:focus {
+    opacity: 1;
+    border-radius: 18px;
+}
+.der-input label {
+    display: block;
+    padding-left: 8px;
+}
+.con-login footer {
+    width: 100%;
+}
+.navbackground {
+    background: #272727 !important;
+}
+.navbackground a{
+    background: #272727 !important;
+}
+.mycolor a{
+    color: rgb(233, 180, 8) !important;
+}
+.mycolor a:hover{
+    color: rgb(230, 228, 224) !important;
+}
+.mycolor {
+    color: rgb(233, 180, 8) !important;
+}
+.mybackground {
+    background: rgb(17, 16, 16) !important;
+}
