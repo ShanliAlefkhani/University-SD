@@ -1,14 +1,14 @@
-from rest_framework import generics
+from django.views.generic import DetailView, UpdateView
 
 from user.models import Person
 from user.serializers.profile import ProfileSerializer, ProfileUpdateSerializer
 
 
-class Profile(generics.ListAPIView):
+class Profile(DetailView):
     queryset = Person.objects.all()
     serializer_class = ProfileSerializer
 
 
-class ProfileUpdate(generics.ListAPIView):
+class ProfileUpdate(UpdateView):
     queryset = Person.objects.all()
     serializer_class = ProfileUpdateSerializer

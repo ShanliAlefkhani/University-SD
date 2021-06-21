@@ -22,3 +22,7 @@ class Person(models.Model):
 
     class Meta:
         ordering = ['name']
+
+    @property
+    def effective_username(self):
+        return self.user.username
