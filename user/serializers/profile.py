@@ -6,10 +6,10 @@ from user.models import Person
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        fields = ['name', 'surname', 'email', 'birthday', 'gender']
+        fields = ['effective_username', 'name', 'surname', 'email', 'github_id', 'linkedin_id', 'birthday', 'gender']
 
 
 class ProfileUpdateSerializer(ProfileSerializer):
     class Meta:
         model = Person
-        fields = ProfileSerializer.Meta.fields + ['username', 'password']
+        fields = ProfileSerializer.Meta.fields
