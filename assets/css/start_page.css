@@ -1,0 +1,146 @@
+body{
+  background-color: #272727;
+}
+
+.masthead {
+  padding: 3rem 0 7rem;
+  position: relative;
+  height: 100%;
+  background-color: #fad42d;
+  background-image:linear-gradient(45deg, #272727 0%, #eccf4b 100%);
+  background-size: cover;
+  z-index: 0;
+}
+
+.masthead svg.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.masthead h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.1;
+  z-index: 1;
+}
+
+.masthead h4 {
+  color: rgba(255, 255, 255, .6);
+  font-weight: 600;
+  z-index: 1;
+  font-size: 1.2rem
+}
+
+.masthead a {
+  color: rgba(255, 255, 255, .8);
+  text-decoration: underline;
+  z-index: 1
+}
+
+.masthead a:hover {
+  color: #fff
+}
+
+.masthead a:active {
+  text-decoration: none
+}
+
+@media(min-width:992px) {
+  .masthead h1 {
+      font-size: 3rem
+  }
+  .masthead h2 {
+      font-size: 1.5rem
+  }
+}
+
+.masthead .masthead-cards {
+  position: relative;
+  z-index: 1
+}
+
+.masthead .masthead-cards .shape {
+  position: absolute;
+  margin-top: 70px;
+  height: 80%;
+  width: 100%;
+  background-color: #272727;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30% 70% 70% 30%/30% 30% 70% 70%
+}
+
+#img {
+  height: 450px !important;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.masthead .masthead-cards .card {
+  opacity: 1;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: .05rem;
+  color: #f7d333;
+  transition: .15s all
+}
+
+.masthead .masthead-cards .card:hover {
+  margin-top: -.25rem;
+  margin-bottom: .25rem
+}
+
+.masthead .masthead-cards .card:active {
+  margin-top: inherit;
+  margin-bottom: inherit
+}
+
+.masthead-page {
+  padding: 1rem 0 4rem
+}
+.border-0 {
+  border: 0!important;
+}
+.button {
+  background: rgb(240, 199, 67);
+  color: rgb(17, 16, 16) !important;
+  margin: 5px;
+  padding: 8px 8px;
+  border-radius: 50px;
+  width: 30%;
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover{
+  background: rgb(240, 199, 67);
+  color: rgb(17, 16, 16) !important;
+  padding: 8px 8px;
+  margin: 5px;
+  border-radius: 50px;
+  width: 30%;
+  display: block;
+  cursor: pointer;
+  font-size: 14px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey; 
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(233, 180, 8); 
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(233, 180, 8); 
+}
+ 

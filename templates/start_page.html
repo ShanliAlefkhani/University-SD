@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>.Code()</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href={% static "css/start_page.css"%} rel="stylesheet" type="text/css">
+        <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
+    </head>
+    <body>
+        <header class="masthead">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 py-5">
+                        <h1 class="mb-4"><i>.Code( )</i></h1>
+                        <h4 class="m-0">Hello</h4>
+                        <h4 class="m-0">This is where you can easily learn programming languages that suit your taste. You can also watch your progress and look for your ideal job and apply for it.</h4>
+                        <br><br>
+                        <a href="http://127.0.0.1:8000/user/login/" class="button" style="text-decoration: none;">Log-in</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="py-5 px-4 masthead-cards">
+                            <img id="img" src="http://127.0.0.1:8000/media/start.svg">
+                            <div class="shape"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+    </body>
+</html>
