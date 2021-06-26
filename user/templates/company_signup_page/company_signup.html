@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Company Sign-Up</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href={% static "css/company_signup.css" %} rel="stylesheet" type="text/css">
+        <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="../LogIn/login.html">Log-In</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Company Sign-Up</li>
+            </ul>
+        </nav>
+        <div class="container">   
+            <div class="die-inputs">
+                <h1>Company Sign Up</h1>
+                <div class="der-input">
+                    <form method="POST"> 
+                        {% csrf_token %}
+                        <label for="{{ company_signup_form.username.id_for_label }}">
+                            {{ company_signup_form.username.label }}
+                        </label>
+                        {{ company_signup_form.username }}
+                        <label for="{{ company_signup_form.name.id_for_label }}">
+                            {{ company_signup_form.name.label }}
+                        </label>
+                        {{ company_signup_form.name }}
+                        <label for="{{ company_signup_form.address.id_for_label }}">
+                            {{ company_signup_form.address.label }}
+                        </label>
+                        {{ company_signup_form.address }}
+                        <label for="{{ company_signup_form.creation_date.id_for_label }}">
+                            {{ company_signup_form.creation_date.label }}
+                        </label>
+                        {{ company_signup_form.creation_date }}
+                        <label for="{{ company_signup_form.email.id_for_label }}">
+                            {{ company_signup_form.email.label }}
+                        </label>
+                        {{ company_signup_form.email }}
+                        <label for="{{ company_signup_form.website.id_for_label }}">
+                            {{ company_signup_form.website.label }}
+                        </label>
+                        {{ company_signup_form.website }}
+                        <label for="{{ company_signup_form.telephone_number.id_for_label }}">
+                            {{ company_signup_form.telephone_number.label }}
+                        </label>
+                        {{ company_signup_form.telephone_number }}
+                        <label for="{{ company_signup_form.about.id_for_label }}">
+                            {{ company_signup_form.about.label }}
+                        </label>
+                        {{ company_signup_form.about }}
+                        <label for="{{ company_signup_form.password.id_for_label }}">
+                            {{ company_signup_form.password.label }}
+                        </label>
+                        {{ company_signup_form.password }}
+                    </div>
+                    <br> 
+                    <footer>
+                        <button type="submit" class="btn-signup">Sign Up</button>
+                        <br>
+                    </footer>
+            </div>  
+        </div>
+    </body>
+</html>

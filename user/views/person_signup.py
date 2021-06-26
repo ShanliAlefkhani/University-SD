@@ -31,7 +31,7 @@ def person_signup(request):
             user=user, name=name, surname=surname, email=email, birthday=birthday, gender=gender,
         )
 
-        return redirect('/login')
+        return redirect("http://127.0.0.1:8000/user/login/")
 
     context = {
         'person_signup_form': person_signup_form
