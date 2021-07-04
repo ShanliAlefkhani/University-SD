@@ -15,7 +15,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/')
+            return redirect('http://127.0.0.1:8000/user/main-menu/')
         else:
             login_form.add_error('username', 'A User With The Entered Profile Could Not Be Found')
 

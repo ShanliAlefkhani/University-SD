@@ -1,7 +1,7 @@
 from django.urls import path, include
 
 from user.views import person_signup, PersonProfile, PersonProfileUpdate, login_user, company_signup, CompanyProfile, \
-    CompanyProfileUpdate
+    CompanyProfileUpdate, MainMenu
 
 urlpatterns = [
     # path('', include('rest_framework.urls')),
@@ -12,4 +12,5 @@ urlpatterns = [
     path('company-profile/<pk>/', CompanyProfile.as_view()),
     path('company-profile-update/<pk>/', CompanyProfileUpdate.as_view()),
     path('login/', login_user),
+    path('main-menu/', MainMenu.as_view())
 ]
