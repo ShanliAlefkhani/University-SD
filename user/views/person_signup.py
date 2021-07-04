@@ -10,8 +10,6 @@ def person_signup(request):
         return redirect('/')
     person_signup_form = PersonSignUpForm(request.POST or None)
 
-    print(person_signup_form.is_valid())
-    print(person_signup_form)
     if person_signup_form.is_valid():
         username = person_signup_form.cleaned_data.get('username')
         name = person_signup_form.cleaned_data.get('name')
