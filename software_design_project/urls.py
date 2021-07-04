@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('course/', include('course.urls')),
     path('user/', include('user.urls')),
+    path('job/', include('job.urls')),
     path('', TemplateView.as_view(template_name='start_page.html')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -25,3 +25,9 @@ class JobSerializer(serializers.ModelSerializer):
         company = CompanySerializer(obj.company).data
         company.pop('user')
         return company
+
+
+class JobUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Job
+        fields = ('title', 'image', 'expire_date', 'field', 'salary', 'working_hours')
