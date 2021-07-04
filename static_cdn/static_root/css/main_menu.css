@@ -1,0 +1,129 @@
+body{
+    color: #fff;
+    text-align: left !important;
+    background: #181818;   
+}
+h1 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 50px;
+    color: rgb(228, 193, 80);
+}
+#content {
+    padding: 70px 0;
+}
+#content .features-list {
+    padding-top: 35px;
+}
+.features-list .feature-block {
+    margin-bottom: 18px;
+}
+.features-list .feature-block .ico {
+    font-size: 37px;
+    line-height: 70px;
+    width:70px;
+    height: 70px;
+    display: inline-block;
+    border-radius: 50%;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.features-list .feature-block.bottom-line .ico {
+    width: auto;
+    height: auto;
+	background: transparent;
+	text-align: center;
+	font-size: 41px;
+	vertical-align: top;
+	margin-top: -10px;
+}
+.features-list .feature-block.bottom-line .fa-github {
+	font-size: 50px;
+}
+.features-list .feature-block.bottom-line .fa-dashboard {
+	font-size: 45px;
+	margin-top: -15px;
+}
+.features-list .feature-block.bottom-line .ico {
+	float: left;
+	margin-right: 15px;
+	margin-left: 21px;
+}
+.features-list .feature-block.bottom-line .features-content {
+	padding-right: 15px;
+	display: table;
+}
+.features-list .feature-block.bottom-line .features-content .name {
+	margin-bottom: 5px;
+}
+.features-list .feature-block.bottom-line .features-content .subname {
+	font-size: 16px;
+	margin-bottom: 12px;
+}
+.features-list .feature-block .name {
+    font-size: 20px;
+    line-height: 1.25em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.features-list .feature-block .text {
+    font-size: 12px;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+  .viewbutton {
+    color: beige;
+    border: 0px;
+    padding: 5px 5px;
+    border-radius: 50px;
+    width: 30%;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+}
+.viewbutton:hover{
+    color: rgb(228, 193, 80);
+    padding: 5px 5px;
+    border-radius: 50px;
+    width: 30%;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+.more {
+    text-align: center !important;
+}
+
+.navbackground {
+    background: #272727 !important;
+}
+.navbackground a{
+    background: #272727 !important;
+}
+.mycolor a{
+    color: rgb(233, 180, 8) !important;
+}
+.mycolor a:hover{
+    color: rgb(230, 228, 224) !important;
+}
+.mycolor {
+    color: rgb(233, 180, 8) !important;
+}
+.mybackground {
+    background: rgb(17, 16, 16) !important;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey; 
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(233, 180, 8); 
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(233, 180, 8); 
+}
