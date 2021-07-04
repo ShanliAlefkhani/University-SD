@@ -1,12 +1,15 @@
 from django.urls import path, include
 
-from user.views import person_signup, Profile, ProfileUpdate, login_user , company_signup
+from user.views import person_signup, PersonProfile, PersonProfileUpdate, login_user, company_signup, CompanyProfile, \
+    CompanyProfileUpdate
 
 urlpatterns = [
     # path('', include('rest_framework.urls')),
     path('person-signup/', person_signup),
     path('company-signup/', company_signup),
-    path('profile/<pk>/', Profile.as_view()),
-    path('profile-update/<pk>/', ProfileUpdate.as_view()),
+    path('person-profile/<pk>/', PersonProfile.as_view()),
+    path('person-profile-update/<pk>/', PersonProfileUpdate.as_view()),
+    path('company-profile/<pk>/', CompanyProfile.as_view()),
+    path('company-profile-update/<pk>/', CompanyProfileUpdate.as_view()),
     path('login/', login_user),
 ]
