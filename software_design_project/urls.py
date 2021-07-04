@@ -25,4 +25,5 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('job/', include('job.urls')),
     path('', TemplateView.as_view(template_name='start_page.html')),
+    path('about-us/', TemplateView.as_view(template_name='about_us_page.html')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
