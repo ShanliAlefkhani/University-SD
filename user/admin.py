@@ -1,5 +1,6 @@
 from django.contrib import admin
 
-from user.models.person import Person
+from user.models import Company, Person
 
 admin.site.register(Person)
+admin.site.register(Company)
