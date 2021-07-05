@@ -1,12 +1,22 @@
-from django.views.generic import DetailView, UpdateView
+from django.views.generic import UpdateView, TemplateView
 
 from user.models import Person
-from user.serializers.person_profile import PersonProfileSerializer, PersonProfileUpdateSerializer
+from user.serializers.person_profile import PersonProfileUpdateSerializer
 
 
-class PersonProfile(DetailView):
-    queryset = Person.objects.all()
-    serializer_class = PersonProfileSerializer
+class PersonProfile(TemplateView):
+    template_name = "person_profile_page/person_profile_page.html"
+
+    def get(self, request, **kwargs):
+        kwargs['user'] = request.user
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['person'] = Person.objects.get(user=kwargs['user'])
+
+        return context
 
 
 class PersonProfileUpdate(UpdateView):
