@@ -22,7 +22,16 @@ class PersonProfile(TemplateView):
 
 
 def person_profile_update(request):
-    person_profile_update_form = PersonProfileUpdateForm(request.POST or None)
+    initial_data ={
+        'name' : Person.objects.get(user=request.user).name ,
+        'surname' : Person.objects.get(user=request.user).surname ,
+        'email' : Person.objects.get(user=request.user).email ,
+        'birthday' : Person.objects.get(user=request.user).birthday ,
+        'gender' : Person.objects.get(user=request.user).gender ,
+        'github_id' : Person.objects.get(user=request.user).github_id ,
+        'linkedin_id' : Person.objects.get(user=request.user).linkedin_id
+    }
+    person_profile_update_form = PersonProfileUpdateForm(request.POST or None , initial=initial_data)
 
     if person_profile_update_form.is_valid():
         name = person_profile_update_form.cleaned_data.get('name')
