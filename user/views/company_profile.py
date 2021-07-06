@@ -5,7 +5,7 @@ from user.serializers.company_profile import CompanyProfileSerializer, CompanyPr
 
 
 class CompanyProfile(TemplateView):
-    template_name = "company_profile_page/company_profile_page.html"
+    template_name = "company_profile.html"
 
     def get(self, request, **kwargs):
         kwargs['user'] = request.user

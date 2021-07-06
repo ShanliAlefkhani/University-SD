@@ -36,4 +36,4 @@ def company_signup(request):
     context = {
         'company_signup_form': company_signup_form
     }
-    return render(request, 'company_signup_page/company_signup.html', context)
+    return render(request, 'company_signup.html', context)

@@ -5,7 +5,7 @@ from user.serializers.person_profile import PersonProfileUpdateSerializer
 
 
 class PersonProfile(TemplateView):
-    template_name = "person_profile_page/person_profile_page.html"
+    template_name = "person_profile.html"
 
     def get(self, request, **kwargs):
         kwargs['user'] = request.user
