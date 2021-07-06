@@ -4,7 +4,15 @@ from user.models import Person, Company
 
 
 class MainMenu(TemplateView):
-    template_name = "main_menu/main_menu.html"
+    template_name = "person_main_menu.html"
+
+    def get_template_names(self):
+        try:
+            Company.objects.get(user=self.request.user)
+            return "company_main_menu.html"
+        except Company.DoesNotExist:
+            Person.objects.get(user=self.request.user)
+            return "person_main_menu.html"
 
     def get(self, request, **kwargs):
         kwargs['user'] = request.user

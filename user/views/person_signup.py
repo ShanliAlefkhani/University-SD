@@ -34,4 +34,4 @@ def person_signup(request):
     context = {
         'person_signup_form': person_signup_form
     }
-    return render(request, 'person_signup_page/person_signup.html', context)
+    return render(request, 'person_signup.html', context)
