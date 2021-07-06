@@ -7,4 +7,4 @@ from course.serializers import ChapterSerializer
 class ChapterDetailView(DetailView):
     queryset = Chapter.objects.all()
     serializer_class = ChapterSerializer
-    template_name = "chapter_detail_page/chapter_detail.html"
+    template_name = "chapter_detail.html"

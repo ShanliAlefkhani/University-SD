@@ -1,7 +1,7 @@
-from django.views.generic import DetailView, UpdateView, TemplateView
+from django.views.generic import UpdateView, TemplateView
 
 from user.models import Company
-from user.serializers.company_profile import CompanyProfileSerializer, CompanyProfileUpdateSerializer
+from user.serializers.company_profile import CompanyProfileUpdateSerializer
 
 
 class CompanyProfile(TemplateView):
