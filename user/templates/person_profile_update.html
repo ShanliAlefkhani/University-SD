@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href={% static "css/person_profile_update.css" %} rel="stylesheet" type="text/css">
+        <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/main-menu/">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/person-profile/">User Profile</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Update Profile</li>
+            </ul>
+        </nav>
+        <div class="container bootstrap snippets bootdeys">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <form method="POST" class="form-horizontal">
+                        {% csrf_token %}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">User info</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group der-input">
+                                    <label class="col-sm-2 control-label" for="{{ person_profile_update_form.name.id_for_label }}">
+                                        {{ person_profile_update_form.name.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ person_profile_update_form.name }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ person_profile_update_form.surname.id_for_label }}">
+                                        {{ person_profile_update_form.surname.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ person_profile_update_form.surname }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ person_profile_update_form.birthday.id_for_label }}">
+                                        {{ person_profile_update_form.birthday.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ person_profile_update_form.birthday }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ person_profile_update_form.gender.id_for_label }}">
+                                        {{ person_profile_update_form.gender.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ person_profile_update_form.gender }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr style="background-color: rgba(255, 215, 82, 0.808);">
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Contact info</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group der-input">
+                                    <label class="col-sm-2 control-label" for="{{ person_profile_update_form.email.id_for_label }}">
+                                        {{ person_profile_update_form.email.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ person_profile_update_form.email }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ person_profile_update_form.github_id.id_for_label }}">
+                                        {{ person_profile_update_form.github_id.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ person_profile_update_form.github_id }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ person_profile_update_form.linkedin_id.id_for_label }}">
+                                        {{ person_profile_update_form.linkedin_id.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ person_profile_update_form.linkedin_id }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr style="background-color: rgba(255, 215, 82, 0.808);">
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <div class="col-sm-10 col-sm-offset-2">
+                                        <button type="submit" class="btn btn-primary button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
