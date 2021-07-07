@@ -1,9 +1,8 @@
 from django.shortcuts import redirect, render
-from django.views.generic import UpdateView, TemplateView
+from django.views.generic import TemplateView
 
 from user.forms.person_profile_update import PersonProfileUpdateForm
 from user.models import Person
-from user.serializers.person_profile import PersonProfileUpdateSerializer
 
 
 class PersonProfile(TemplateView):
@@ -22,16 +21,16 @@ class PersonProfile(TemplateView):
 
 
 def person_profile_update(request):
-    initial_data ={
-        'name' : Person.objects.get(user=request.user).name ,
-        'surname' : Person.objects.get(user=request.user).surname ,
-        'email' : Person.objects.get(user=request.user).email ,
-        'birthday' : Person.objects.get(user=request.user).birthday ,
-        'gender' : Person.objects.get(user=request.user).gender ,
-        'github_id' : Person.objects.get(user=request.user).github_id ,
-        'linkedin_id' : Person.objects.get(user=request.user).linkedin_id
+    initial_data = {
+        'name': Person.objects.get(user=request.user).name,
+        'surname': Person.objects.get(user=request.user).surname,
+        'email': Person.objects.get(user=request.user).email,
+        'birthday': Person.objects.get(user=request.user).birthday,
+        'gender': Person.objects.get(user=request.user).gender,
+        'github_id': Person.objects.get(user=request.user).github_id,
+        'linkedin_id': Person.objects.get(user=request.user).linkedin_id
     }
-    person_profile_update_form = PersonProfileUpdateForm(request.POST or None , initial=initial_data)
+    person_profile_update_form = PersonProfileUpdateForm(request.POST or None, initial=initial_data)
 
     if person_profile_update_form.is_valid():
         name = person_profile_update_form.cleaned_data.get('name')
@@ -43,7 +42,13 @@ def person_profile_update(request):
         linkedin_id = person_profile_update_form.cleaned_data.get('linkedin_id')
 
         Person.objects.update(
-            name=name, surname=surname, email=email, birthday=birthday, gender=gender, github_id=github_id, linkedin_id=linkedin_id,
+            name=name,
+            surname=surname,
+            email=email,
+            birthday=birthday,
+            gender=gender,
+            github_id=github_id,
+            linkedin_id=linkedin_id,
         )
 
         return redirect("http://127.0.0.1:8000/user/person-profile/")
