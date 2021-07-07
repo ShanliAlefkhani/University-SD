@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href={% static "css/company_profile_update.css" %} rel="stylesheet" type="text/css">
+        <link href="../icons8-puzzle-64.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="../company-profile">Company Profile</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Update Profile</li>
+            </ul>
+        </nav>
+        <div class="container bootstrap snippets bootdeys">
+            <div class="row">
+                <div class="col-xs-12 col-sm-9">
+                    <form method="POST" class="form-horizontal" >
+                        {% csrf_token %}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Company info</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group der-input">
+                                    <label class="col-sm-2 control-label" for="{{ company_profile_update_form.name.id_for_label }}">
+                                        {{ company_profile_update_form.name.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ company_profile_update_form.name }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ company_profile_update_form.address.id_for_label }}">
+                                        {{ company_profile_update_form.address.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ company_profile_update_form.address }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ company_profile_update_form.creation_date.id_for_label }}">
+                                        {{ company_profile_update_form.creation_date.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ company_profile_update_form.creation_date }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ company_profile_update_form.about.id_for_label }}">
+                                        {{ company_profile_update_form.about.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ company_profile_update_form.about }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr style="background-color: rgba(255, 215, 82, 0.808);">
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Contact info</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group der-input">
+                                    <label class="col-sm-2 control-label" for="{{ company_profile_update_form.email.id_for_label }}">
+                                        {{ company_profile_update_form.email.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ company_profile_update_form.email }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ company_profile_update_form.website.id_for_label }}">
+                                        {{ company_profile_update_form.website.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ company_profile_update_form.website }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ company_profile_update_form.telephone_number.id_for_label }}">
+                                        {{ company_profile_update_form.telephone_number.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ company_profile_update_form.telephone_number }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr style="background-color: rgba(255, 215, 82, 0.808);">
+                        <br>
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="form-group">
+                                    <div class="col-sm-10 col-sm-offset-2">
+                                        <button type="submit" class="btn btn-primary button">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
