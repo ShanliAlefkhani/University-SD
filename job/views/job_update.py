@@ -5,13 +5,13 @@ from job.models import Job
 from user.models import Company
 
 
-def job_update(request):
+def job_update(request, pk):
     initial_data = {
-        'title': Job.objects.get(user=request.user).title,
-        'description': Job.objects.get(user=request.user).description,
-        'requirements': Job.objects.get(user=request.user).requirements,
-        'salary': Job.objects.get(user=request.user).salary,
-        'work_time': Job.objects.get(user=request.user).work_time,
+        'title': Job.objects.get(id=pk).title,
+        'description': Job.objects.get(id=pk).description,
+        'requirements': Job.objects.get(id=pk).requirements,
+        'salary': Job.objects.get(id=pk).salary,
+        'work_time': Job.objects.get(id=pk).work_time,
     }
     job_form = JobForm(request.POST or None, initial=initial_data)
 
@@ -25,6 +25,7 @@ def job_update(request):
         company = Company.objects.get(user=request.user)
 
         Job.objects.update(
+            id=pk,
             company=company,
             title=title,
             description=description,
