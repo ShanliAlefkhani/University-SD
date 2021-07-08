@@ -86,7 +86,7 @@ a:active {
     display: block;
     padding-left: 8px;
 }
-.der-input select {
+.der-input textarea {
     width: 150%;
     padding: 14px 20px;
     border: 0px;
@@ -95,9 +95,9 @@ a:active {
     border: 2px solid rgb(245, 196, 37);
     transition: all .25s ease;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
-    color: #f7f3f3 !important;
-  }
-  .der-input select:focus {
+    color: #f7f3f3;
+}
+.der-input textarea:focus {
     width: 150%;
     padding: 14px 20px;
     border: 0px;
@@ -106,16 +106,8 @@ a:active {
     border: 2px solid rgb(245, 196, 37);
     transition: all .25s ease;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
-    color: #f7f3f3 !important;
-  }
-  option {
-    background-color: #272727;
-    color: rgb(245, 196, 37) !important;
-  }
-  select:focus > option:checked{
-    background-color:rgb(245, 196, 37) !important;
-    color: #272727 !important;
-  }
+    color: #f7f3f3;
+}
 footer {
     width: 150%;
 }
