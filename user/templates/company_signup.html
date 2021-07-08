@@ -14,7 +14,7 @@
     <body>
         <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
             <ul class="breadcrumb navbackground">
-                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/main-menu/">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/">Start Page</a></li>
                 <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/login/">Log-In</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Company Sign-Up</li>
             </ul>
@@ -22,43 +22,52 @@
         <div class="container">   
             <div class="die-inputs">
                 <h1>Company Sign Up</h1>
+                <br>
                 <div class="der-input">
                     <form method="POST"> 
                         {% csrf_token %}
                         <label for="{{ company_signup_form.username.id_for_label }}">
-                            {{ company_signup_form.username.label }}
+                            {{ company_signup_form.username.label }}:
                         </label>
                         {{ company_signup_form.username }}
                         <label for="{{ company_signup_form.name.id_for_label }}">
-                            {{ company_signup_form.name.label }}
+                            <br>
+                            {{ company_signup_form.name.label }}:
                         </label>
                         {{ company_signup_form.name }}
                         <label for="{{ company_signup_form.address.id_for_label }}">
-                            {{ company_signup_form.address.label }}
+                            <br>
+                            {{ company_signup_form.address.label }}:
                         </label>
                         {{ company_signup_form.address }}
                         <label for="{{ company_signup_form.creation_date.id_for_label }}">
-                            {{ company_signup_form.creation_date.label }}
+                            <br>
+                            {{ company_signup_form.creation_date.label }}:
                         </label>
                         {{ company_signup_form.creation_date }}
                         <label for="{{ company_signup_form.email.id_for_label }}">
-                            {{ company_signup_form.email.label }}
+                            <br>
+                            {{ company_signup_form.email.label }}:
                         </label>
                         {{ company_signup_form.email }}
                         <label for="{{ company_signup_form.website.id_for_label }}">
-                            {{ company_signup_form.website.label }}
+                            <br>
+                            {{ company_signup_form.website.label }}:
                         </label>
                         {{ company_signup_form.website }}
                         <label for="{{ company_signup_form.telephone_number.id_for_label }}">
-                            {{ company_signup_form.telephone_number.label }}
+                            <br>
+                            {{ company_signup_form.telephone_number.label }}:
                         </label>
                         {{ company_signup_form.telephone_number }}
                         <label for="{{ company_signup_form.about.id_for_label }}">
-                            {{ company_signup_form.about.label }}
+                            <br>
+                            {{ company_signup_form.about.label }}:
                         </label>
                         {{ company_signup_form.about }}
                         <label for="{{ company_signup_form.password.id_for_label }}">
-                            {{ company_signup_form.password.label }}
+                            <br>
+                            {{ company_signup_form.password.label }}:
                         </label>
                         {{ company_signup_form.password }}
                         <br>
