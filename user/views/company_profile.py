@@ -1,9 +1,8 @@
 from django.shortcuts import redirect, render
-from django.views.generic import UpdateView, TemplateView
+from django.views.generic import TemplateView
 
 from user.forms.company_profile_update import CompanyProfileUpdateForm
 from user.models import Company
-
 
 
 class CompanyProfile(TemplateView):
@@ -22,16 +21,16 @@ class CompanyProfile(TemplateView):
 
 
 def company_profile_update(request):
-    initial_data ={
-        'name' : Company.objects.get(user=request.user).name ,
-        'address' : Company.objects.get(user=request.user).address ,
-        'creation_date' : Company.objects.get(user=request.user).creation_date ,
-        'about' : Company.objects.get(user=request.user).about ,
-        'email' : Company.objects.get(user=request.user).email ,
-        'website' : Company.objects.get(user=request.user).website ,
-        'telephone_number' : Company.objects.get(user=request.user).telephone_number
+    initial_data = {
+        'name': Company.objects.get(user=request.user).name,
+        'address': Company.objects.get(user=request.user).address,
+        'creation_date': Company.objects.get(user=request.user).creation_date,
+        'about': Company.objects.get(user=request.user).about,
+        'email': Company.objects.get(user=request.user).email,
+        'website': Company.objects.get(user=request.user).website,
+        'telephone_number': Company.objects.get(user=request.user).telephone_number
     }
-    company_profile_update_form = CompanyProfileUpdateForm(request.POST or None , initial=initial_data)
+    company_profile_update_form = CompanyProfileUpdateForm(request.POST or None, initial=initial_data)
 
     if company_profile_update_form.is_valid():
         name = company_profile_update_form.cleaned_data.get('name')
@@ -43,7 +42,13 @@ def company_profile_update(request):
         telephone_number = company_profile_update_form.cleaned_data.get('telephone_number')
 
         Company.objects.update(
-            name=name, address=address, creation_date=creation_date, about=about, email=email, website=website, telephone_number=telephone_number,
+            name=name,
+            address=address,
+            creation_date=creation_date,
+            about=about,
+            email=email,
+            website=website,
+            telephone_number=telephone_number,
         )
 
         return redirect("http://127.0.0.1:8000/user/company-profile/")

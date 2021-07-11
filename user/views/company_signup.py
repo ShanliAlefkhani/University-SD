@@ -28,7 +28,14 @@ def company_signup(request):
         user.save()
 
         Company.objects.create(
-            user=user, name=name, address=address, creation_date=creation_date, email=email, website=website, telephone_number=telephone_number, about=about,
+            user=user,
+            name=name,
+            address=address,
+            creation_date=creation_date,
+            email=email,
+            website=website,
+            telephone_number=telephone_number,
+            about=about,
         )
 
         return redirect("http://127.0.0.1:8000/user/login/")

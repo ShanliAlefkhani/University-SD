@@ -19,98 +19,99 @@
             </ul>
         </nav>
         <div style="margin: 0px 0px 0px 225px;">
-        <div class="container">
-            <div class="main-body">
-                <div class="row gutters-sm">
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center text-center" style="height: 420px;">
-                                    <div class="mt-3" style="height: 400px;">
-                                        <h4>{{ company.user.username }}</h4>
-                                        <br>
-                                        <p class="text-secondary mb-1">Company</p>
-                                        <br>
-                                        <hr style="background-color: rgb(233, 180, 8);">
-                                        <div style="width: 300px; height:200px; padding: 2px; font-size: 12px;">
-                                            <div class="row text-left">
-                                                <div class="col-sm-4">
-                                                    <p class="mb-0">Email</p>
+            <div class="container">
+                <div class="main-body">
+                    <div class="row gutters-sm">
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex flex-column align-items-center text-center" style="height: 420px;">
+                                        <div class="mt-3" style="height: 400px;">
+                                            <h4>{{ company.user.username }}</h4>
+                                            <br>
+                                            <p class="text-secondary mb-1">Company</p>
+                                            <br>
+                                            <hr style="background-color: rgb(233, 180, 8);">
+                                            <div style="width: 300px; height:200px; padding: 2px; font-size: 12px;">
+                                                <div class="row text-left">
+                                                    <div class="col-sm-4">
+                                                        <p class="mb-0">Email</p>
+                                                    </div>
+                                                    <div class="col-sm-8 text-secondary">
+                                                        <p>{{ company.email }}</p>
+                                                    </div>
                                                 </div>
-                                                <div class="col-sm-8 text-secondary">
-                                                    <p>{{ company.email }}</p>
+                                                <div class="row text-left">
+                                                    <div class="col-sm-4">
+                                                        <p class="mb-0">Website</p>
+                                                    </div>
+                                                    <div class="col-sm-8 text-secondary">
+                                                        <p>{{ company.website }}</p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="row text-left">
-                                                <div class="col-sm-4">
-                                                    <p class="mb-0">Website</p>
-                                                </div>
-                                                <div class="col-sm-8 text-secondary">
-                                                    <p>{{ company.website }}</p>
-                                                </div>
-                                            </div>
-                                            <div class="row text-left">
-                                                <div class="col-sm-4">
-                                                    <p class="mb-0">Telephone</p>
-                                                </div>
-                                                <div class="col-sm-8 text-secondary">
-                                                    <p>{{ company.telephone_number }}</p>
+                                                <div class="row text-left">
+                                                    <div class="col-sm-4">
+                                                        <p class="mb-0">Telephone</p>
+                                                    </div>
+                                                    <div class="col-sm-8 text-secondary">
+                                                        <p>{{ company.telephone_number }}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <button class="btn btn-primary button"><a href="http://127.0.0.1:8000/user/company-profile-update/">Update Profile</a></button>
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card mb-3" style="width:500px;">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <h6 class="mb-0">Name</h6>
-                                    </div>
-                                    <div class="col-sm-8 text-secondary">
-                                        <h6>{{ company.name }}</h6>
-                                    </div>
-                                </div>
-                                <hr style="background-color: rgb(233, 180, 8);">
-                                <hr style="background-color: rgb(233, 180, 8);">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <h6 class="mb-0">Address</h6>
-                                    </div>
-                                    <div class="col-sm-8 text-secondary">
-                                        <h6>{{ company.address }}</h6>
-                                    </div>
-                                </div>
-                                <hr style="background-color: rgb(233, 180, 8);">
-                                <hr style="background-color: rgb(233, 180, 8);">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <h6 class="mb-0">Creation Date</h6>
-                                    </div>
-                                    <div class="col-sm-8 text-secondary">
-                                        <h6>{{ company.creation_date }}</h6>
+                                        <button class="btn btn-primary button"><a href="http://127.0.0.1:8000/user/company-profile-update/">Update Profile</a></button>
+                                        <br>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row gutters-sm">
-                            <div class="col-sm-6 mb-3">
-                                <div class="card h-100" style="width:500px;">
-                                    <div class="card-body" style="height:225px;">
-                                        <div class="row">
-                                            <div class="col-sm-3">
-                                                <h6 class="mb-0 mycolor">About</h6>
-                                            </div>
+                        <div class="col-md-8">
+                            <div class="card mb-3" style="width:500px;">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <h6 class="mb-0">Name</h6>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-sm-9 text-secondary">
-                                                <br>
-                                                <p>{{ company.about }}</p>
+                                        <div class="col-sm-8 text-secondary">
+                                            <h6>{{ company.name }}</h6>
+                                        </div>
+                                    </div>
+                                    <hr style="background-color: rgb(233, 180, 8);">
+                                    <hr style="background-color: rgb(233, 180, 8);">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <h6 class="mb-0">Address</h6>
+                                        </div>
+                                        <div class="col-sm-8 text-secondary">
+                                            <h6>{{ company.address }}</h6>
+                                        </div>
+                                    </div>
+                                    <hr style="background-color: rgb(233, 180, 8);">
+                                    <hr style="background-color: rgb(233, 180, 8);">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <h6 class="mb-0">Creation Date</h6>
+                                        </div>
+                                        <div class="col-sm-8 text-secondary">
+                                            <h6>{{ company.creation_date }}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row gutters-sm">
+                                <div class="col-sm-6 mb-3">
+                                    <div class="card h-100" style="width:500px;">
+                                        <div class="card-body" style="height:225px;">
+                                            <div class="row">
+                                                <div class="col-sm-3">
+                                                    <h6 class="mb-0 mycolor">About</h6>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-9 text-secondary">
+                                                    <br>
+                                                    <p>{{ company.about }}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -121,6 +122,5 @@
                 </div>
             </div>
         </div>
-    </div>
     </body>
 </html>
