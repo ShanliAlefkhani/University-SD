@@ -9,6 +9,9 @@ class CompanyProfile(TemplateView):
     template_name = "company_profile.html"
 
     def get(self, request, **kwargs):
+        if request.user.is_anonymous:
+            return redirect('http://127.0.0.1:8000/')
+
         kwargs['user'] = request.user
         context = self.get_context_data(**kwargs)
         return self.render_to_response(context)
@@ -21,6 +24,9 @@ class CompanyProfile(TemplateView):
 
 
 def company_profile_update(request):
+    if request.user.is_anonymous:
+        return redirect('http://127.0.0.1:8000/')
+
     initial_data = {
         'name': Company.objects.get(user=request.user).name,
         'address': Company.objects.get(user=request.user).address,

@@ -6,8 +6,8 @@ from user.models.company import Company
 
 
 def company_signup(request):
-    if request.user.is_authenticated:
-        return redirect('/')
+    if not request.user.is_anonymous:
+        return redirect('http://127.0.0.1:8000/user/main-menu/')
     company_signup_form = CompanySignUpForm(request.POST or None)
 
     if company_signup_form.is_valid():
