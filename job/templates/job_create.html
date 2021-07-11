@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Job</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"> 
+        <link href={% static "css/job_create.css"%} rel="stylesheet" type="text/css">
+        <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/main-menu/">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="../JobList/JobList.html">Job Positions</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Create Job</li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row">
+                 <div class="col-lg-10 mx-auto mb-4">
+                    <div class="section-title text-center ">
+                        <h3 class="top-c-sep mycolor">We can help you to find your professional and suitable teammate.</h3>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                    <form method="POST" class="form-horizontal">
+                        {% csrf_token %}
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="form-group der-input">
+                                    <label class="col-sm-2 control-label" for="{{ job_form.title.id_for_label }}">
+                                        {{ job_form.title.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ job_form.title }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ job_form.description.id_for_label }}">
+                                        {{ job_form.description.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ job_form.description }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ job_form.requirements.id_for_label }}">
+                                        {{ job_form.requirements.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ job_form.requirements }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ job_form.salary.id_for_label }}">
+                                        {{ job_form.salary.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ job_form.salary }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ job_form.work_time.id_for_label }}">
+                                        {{ job_form.work_time.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ job_form.work_time }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <br>
+                                <button type="submit" class="btn btn-primary button">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

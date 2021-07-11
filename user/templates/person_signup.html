@@ -14,7 +14,7 @@
     <body>
         <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
             <ul class="breadcrumb navbackground">
-                <li class="breadcrumb-item mycolor"><a href="#">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/">Start Page</a></li>
                 <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/login/">Log-In</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Person Sign-Up</li>
             </ul>
@@ -22,6 +22,7 @@
         <div class="container">   
             <div class="die-inputs">
                 <h1>Person Sign Up</h1>
+                <br>
                 <div class="der-input">
                     <form method="POST">
                         {% csrf_token %}
@@ -30,26 +31,32 @@
                         </label>
                         {{ person_signup_form.username }}
                         <label for="{{ person_signup_form.name.id_for_label }}">
+                            <br>
                             {{ person_signup_form.name.label }}
                         </label>
                         {{ person_signup_form.name }}
                         <label for="{{ person_signup_form.surname.id_for_label }}">
+                            <br>
                             {{ person_signup_form.surname.label }}
                         </label>
                         {{ person_signup_form.surname }}
                         <label for="{{ person_signup_form.email.id_for_label }}">
+                            <br>
                             {{ person_signup_form.email.label }}
                         </label>
                         {{ person_signup_form.email }}
                         <label for="{{ person_signup_form.birthday.id_for_label }}">
+                            <br>
                             {{ person_signup_form.birthday.label }}
                         </label>
                         {{ person_signup_form.birthday }}
                         <label for="{{ person_signup_form.gender.id_for_label }}">
+                            <br>
                             {{ person_signup_form.gender.label }}
                         </label>
                         {{ person_signup_form.gender }}
                         <label for="{{ person_signup_form.password.id_for_label }}">
+                            <br>
                             {{ person_signup_form.password.label }}
                         </label>
                         {{ person_signup_form.password }}
