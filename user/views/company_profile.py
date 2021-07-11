@@ -47,15 +47,15 @@ def company_profile_update(request):
         website = company_profile_update_form.cleaned_data.get('website')
         telephone_number = company_profile_update_form.cleaned_data.get('telephone_number')
 
-        Company.objects.update(
-            name=name,
-            address=address,
-            creation_date=creation_date,
-            about=about,
-            email=email,
-            website=website,
-            telephone_number=telephone_number,
-        )
+        company = Company.objects.get(user=request.user)
+        company.name = name
+        company.address = address
+        company.creation_date = creation_date
+        company.about = about
+        company.email = email
+        company.website = website
+        company.telephone_number = telephone_number
+        company.save()
 
         return redirect("http://127.0.0.1:8000/user/company-profile/")
 

@@ -47,15 +47,15 @@ def person_profile_update(request):
         github_id = person_profile_update_form.cleaned_data.get('github_id')
         linkedin_id = person_profile_update_form.cleaned_data.get('linkedin_id')
 
-        Person.objects.update(
-            name=name,
-            surname=surname,
-            email=email,
-            birthday=birthday,
-            gender=gender,
-            github_id=github_id,
-            linkedin_id=linkedin_id,
-        )
+        person = Person.objects.get(user=request.user)
+        person.name = name
+        person.surname = surname
+        person.email = email
+        person.birthday = birthday
+        person.gender = gender
+        person.github_id = github_id
+        person.linkedin_id = linkedin_id
+        person.save()
 
         return redirect("http://127.0.0.1:8000/user/person-profile/")
 
