@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render, redirect
 from rest_framework import generics
 
 from job.forms.job_create import JobForm
@@ -13,6 +13,9 @@ class JobCreate(generics.CreateAPIView):
 
 
 def job_create(request):
+    if request.user.is_anonymous:
+        return redirect('http://127.0.0.1:8000/')
+
     initial_data = {
         'description': 'We are looking for a ...'
     }
@@ -36,7 +39,7 @@ def job_create(request):
             work_time=work_time,
         )
 
-        # return redirect("http://127.0.0.1:8000/user/login/")
+        return redirect("http://127.0.0.1:8000/job/job-list/")
 
     context = {
         'job_form': job_form

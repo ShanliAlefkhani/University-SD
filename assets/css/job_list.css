@@ -1,0 +1,169 @@
+body{
+  background: #181818;
+  color: #fff;
+  margin-top:20px;
+}
+
+.career-form {
+  background-color: #272727;
+  border-radius: 5px;
+  padding: 0 16px;
+}
+
+.career-form .form-control {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  padding: 12px 15px;
+  color: #fff;
+}
+
+.career-form .custom-select {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  padding: 12px 15px;
+  color: #272727;
+  width: 100%;
+  border-radius: 5px;
+  text-align: left;
+  height: auto;
+  background-image: none;
+}
+input {
+    background-color: #272727;
+    color: rgb(233, 180, 8) !important;
+}
+option {
+    background-color: #272727;
+    color: rgb(233, 180, 8) !important;
+}
+
+.career-form .custom-select:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.career-form .select-container {
+  position: relative;
+}
+
+.career-form .select-container:before {
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 14px);
+  font-size: 18px;
+  color: #ffffff;
+  content: '\F2F9';
+  font-family: "Material-Design-Iconic-Font";
+}
+
+.filter-result .job-box {
+  -webkit-box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+          box-shadow: 0 0 35px 0 rgba(130, 130, 130, 0.2);
+  border-radius: 10px;
+  padding: 10px 35px;
+}
+
+ul {
+  list-style: none;
+}
+
+.list-disk li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.list-disk li:last-child {
+  margin-bottom: 0;
+}
+
+.job-box .img-holder {
+  height: 65px;
+  width: 65px;
+  background-color: rgba(228, 193, 80, 0.925);
+  font-family: "Open Sans", sans-serif;
+  color: #272727;
+  font-size: 22px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 65px;
+}
+
+.career-title {
+  background-color: #272727d7 !important;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(78, 99, 215, 0.9)), to(#5a85dd));
+  background-image: linear-gradient(to right, rgba(78, 99, 215, 0.9) 0%, #5a85dd 100%);
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+.navbackground {
+    background: #272727 !important;
+}
+.navbackground a{
+    background: #272727 !important;
+}
+.mycolor a{
+    color: rgb(233, 180, 8) !important;
+}
+.mycolor a:hover{
+    color: rgb(230, 228, 224) !important;
+}
+.mycolor {
+    color: rgb(233, 180, 8) !important;
+}
+.mybackground {
+    background: rgb(17, 16, 16) !important;
+}
+.button {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 0px;
+    padding: 12px 12px;
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+}
+.button:hover{
+    background: rgb(233, 180, 8);
+    color: #181818;
+    border: 2px solid black;
+    padding: 12px 12px;
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+}
+.viewbutton {
+    background: rgb(228, 193, 80);
+    color: #181818;
+    border: 0px;
+    padding: 12px 12px;
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+}
+.viewbutton:hover{
+    background: rgb(248, 199, 39);
+    color: floralwhite;
+    border: 1px solid floralwhite;
+    padding: 12px 12px;
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+}

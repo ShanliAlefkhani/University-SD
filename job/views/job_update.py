@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from job.forms.job_create import JobForm
 from job.models import Job
@@ -6,6 +6,9 @@ from user.models import Company
 
 
 def job_update(request, pk):
+    if request.user.is_anonymous:
+        return redirect('http://127.0.0.1:8000/')
+
     initial_data = {
         'title': Job.objects.get(id=pk).title,
         'description': Job.objects.get(id=pk).description,
@@ -34,7 +37,7 @@ def job_update(request, pk):
             work_time=work_time,
         )
 
-        # return redirect("http://127.0.0.1:8000/user/login/")
+        return redirect("http://127.0.0.1:8000/job/job-detail/")
 
     context = {
         'job_form': job_form
