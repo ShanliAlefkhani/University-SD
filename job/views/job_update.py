@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
 
-from job.forms.job_create import JobForm
+from job.forms.job import JobForm
 from job.models import Job
-from user.models import Company
 
 
 def job_update(request, pk):
@@ -24,18 +23,16 @@ def job_update(request, pk):
         requirements = job_form.cleaned_data.get('requirements')
         salary = job_form.cleaned_data.get('salary')
         work_time = job_form.cleaned_data.get('work_time')
+        location = job_form.cleaned_data.get('location')
 
-        company = Company.objects.get(user=request.user)
-
-        Job.objects.update(
-            id=pk,
-            company=company,
-            title=title,
-            description=description,
-            requirements=requirements,
-            salary=salary,
-            work_time=work_time,
-        )
+        job = Job.objects.get(id=pk)
+        job.title = title
+        job.description = description
+        job.requirements = requirements
+        job.salary = salary
+        job.work_time = work_time
+        job.location = location
+        job.save()
 
         return redirect("http://127.0.0.1:8000/job/job-detail/")
 

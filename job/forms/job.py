@@ -28,3 +28,8 @@ class JobForm(forms.Form):
         widget=forms.Select(choices=Job.WORK_TIME_CHOICES),
         label='Work Time(Full Time / Part Time / Remote):',
     )
+
+    location = forms.CharField(
+        widget=forms.TextInput(),
+        label='Location:',
+    )

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from rest_framework import generics
 
-from job.forms.job_create import JobForm
+from job.forms.job import JobForm
 from job.models import Job
 from job.serializers.job import JobSerializer
 from user.models import Company

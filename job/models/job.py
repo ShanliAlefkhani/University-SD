@@ -15,6 +15,7 @@ class Job(models.Model):
     requirements = models.TextField(max_length=200, null=True)
     salary = models.IntegerField(default=0)
     work_time = models.CharField(max_length=1, choices=WORK_TIME_CHOICES)
+    location = models.CharField(max_length=20)
 
     def __str__(self):
         return self.title + "@" + self.company.name
