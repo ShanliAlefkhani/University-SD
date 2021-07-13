@@ -33,3 +33,8 @@ class JobForm(forms.Form):
         widget=forms.TextInput(),
         label='Location:',
     )
+
+    field = forms.CharField(
+        widget=forms.Select(choices=Job.Field_CHOICES),
+        label='Field(Backend / Frontend):',
+    )
