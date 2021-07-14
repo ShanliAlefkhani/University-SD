@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <link href={% static "css/question_detail.css"%} rel="stylesheet" type="text/css">
+        <script src={% static "js/question_detail.js"%}></script>
         <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
     </head>
     <body>
@@ -36,7 +37,7 @@
                                 <br>
                                 <form>
                                     {% for choice in object.choices.all %}
-                                        <input type="radio" id="answer1" name="answer" value="answer1">
+                                        <input type="radio" name="answer" onchange="clicked('{{ choice.is_the_right_answer }}')">
                                         <label for="answer1">{{ choice.text }}</label><br>
                                     {% endfor %}
                                 </form>
@@ -47,10 +48,8 @@
             </div>
             <div style="margin-left: 450px;">
                 <br>
-                <div class="row">
-                    <a href="#" class="btn button">Submit</a>
-                    
-                    <a href="{{ object.next }}" class="btn button">Next</a>
+                <div class="row">                    
+                    <button onclick="location.href='{{ object.next }}'" style="margin-left: 50px;" id="sub" class="button" disabled>Next</button>
                 </div>
             </div>            
         </div>
