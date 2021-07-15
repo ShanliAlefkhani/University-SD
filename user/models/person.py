@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-from course.models import Course
+from course.models.course import Course
 
 
 class Person(models.Model):
@@ -26,3 +26,7 @@ class Person(models.Model):
     @property
     def effective_username(self):
         return self.user.username
+
+    @property
+    def get_first_course(self):
+        return self.courses.first()
