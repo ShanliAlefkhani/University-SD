@@ -99,7 +99,7 @@
                                                     <i class="zmdi zmdi-money mr-2"></i> {{ job.salary }}
                                                 </li>
                                                 <li class="mr-md-4">
-                                                    <i class="zmdi zmdi-time mr-2"></i> {{ job.work_time }}
+                                                    <i class="zmdi zmdi-time mr-2"></i> {{ job.get_full_work_time }}
                                                 </li>
                                             </ul>
                                         </div>
@@ -111,15 +111,15 @@
                             {% endfor %}
                         </div>
                     </div>
-                    <nav aria-label="Page navigation">
-                        <ul class="pagination pagination-reset justify-content-center">
-                            <li class="page-item navbackground mycolor"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item d-none d-md-inline-block navbackground mycolor"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item d-none d-md-inline-block navbackground mycolor"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item navbackground mycolor"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item navbackground mycolor"><a class="page-link" href="#">8</a></li>
-                        </ul>
-                    </nav>
+{#                    <nav aria-label="Page navigation">#}
+{#                        <ul class="pagination pagination-reset justify-content-center">#}
+{#                            <li class="page-item navbackground mycolor"><a class="page-link" href="#">1</a></li>#}
+{#                            <li class="page-item d-none d-md-inline-block navbackground mycolor"><a class="page-link" href="#">2</a></li>#}
+{#                            <li class="page-item d-none d-md-inline-block navbackground mycolor"><a class="page-link" href="#">3</a></li>#}
+{#                            <li class="page-item navbackground mycolor"><a class="page-link" href="#">...</a></li>#}
+{#                            <li class="page-item navbackground mycolor"><a class="page-link" href="#">8</a></li>#}
+{#                        </ul>#}
+{#                    </nav>#}
                 </div>
             </div>
         </div>

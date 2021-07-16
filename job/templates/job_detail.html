@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Job Details</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Tutorial, Programming">
+        <meta name="description" content="A WebPage for Learning Programming">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href={% static "css/job_detail.css"%} rel="stylesheet" type="text/css">
+        <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
+    </head>
+    <body>
+        <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
+            <ul class="breadcrumb navbackground">
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/main-menu/">Home</a></li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/job/job-list/">Job Positions</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Job Details</li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="main-body">
+                <div class="row gutters-sm">
+                    <div class="card card-info">
+                        <div class="card-body">
+                            <div class="d-flex flex-column text-left">
+                                <h1>{{ object.title }}</h1>
+                                <h6 class="left" style="color : rgba(150, 144, 144, 0.322)">{{ object.company.name }}</h6>
+                                <h6 class="left" style="color : rgba(150, 144, 144, 0.322)">{{ object.company.address }}</h6>
+                                <a href=//{{ object.company.website }} style="text-decoration:none;"><h6 class="left" style="color : rgba(150, 144, 144, 0.322)">
+                                    {{ object.company.website }}</h6></a>
+                                <div class="row" style="margin-left: 2px;">
+                                    <button onclick="location.href='#'" class="btn btn-primary tagbutton">{{ object.get_full_field }}</button>
+                                </div>
+                            </div>
+                            <hr style="background-color: rgb(233, 180, 8);">
+                            <div class="d-flex flex-column text-left">
+                                <h5>Job Description</h5>
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">{{ object.description }}</p>
+                            </div>
+                            <hr style="background-color: rgb(233, 180, 8);">
+                            <div class="d-flex flex-column text-left">
+                                <h5>Requirements</h5>
+                                <div class="left" style="color : rgba(150, 144, 144, 0.63)">
+                                    <ul>
+                                        <li>{{ object.requirements }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr style="background-color: rgb(233, 180, 8);">
+                            <div class="d-flex flex-column text-left">
+                                <h5>Salary</h5>
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">{{ object.salary }}</p>
+                            </div>
+                            <hr style="background-color: rgb(233, 180, 8);">
+                            <div class="d-flex flex-column text-left">
+                                <h5>Work Time:</h5>
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">{{ object.get_full_work_time }}</p>
+                            </div>
+                            <!--If the request for "Company Person" responded , this part would be shown.-->
+                            <div>
+                                <hr style="background-color: rgb(233, 180, 8);">
+                                <hr style="background-color: rgb(233, 180, 8);">
+                                <div class="d-flex flex-column text-left">
+                                    <h5>Apply</h5>
+                                    <p class="left" style="color : rgba(150, 144, 144, 0.63)">If you are interesting in this position you can apply for it.</p>
+                                    <br>
+                                    <div class="col-sm-10 col-sm-offset-2">
+                                        <button type="submit" class="btn btn-primary button">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--If the request for "Company Person" responded , this part would be shown.-->
+                            <div>
+                                <hr style="background-color: rgb(233, 180, 8);">
+                                <hr style="background-color: rgb(233, 180, 8);">
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">You can check this job applications list</p>
+                                <a href="../UpdateOrDeleteJob/UpdateOrDeleteJob.html" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Applications</a>
+                                <br><br>
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">You can update or delete this AD!</p>
+                                <a href="../UpdateOrDeleteJob/UpdateOrDeleteJob.html" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Update or Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
