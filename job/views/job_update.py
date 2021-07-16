@@ -9,6 +9,7 @@ def job_update(request, pk):
         return redirect('http://127.0.0.1:8000/')
 
     initial_data = {
+        'pk': pk,
         'title': Job.objects.get(id=pk).title,
         'description': Job.objects.get(id=pk).description,
         'requirements': Job.objects.get(id=pk).requirements,

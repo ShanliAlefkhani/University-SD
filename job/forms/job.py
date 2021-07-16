@@ -4,6 +4,11 @@ from job.models import Job
 
 
 class JobForm(forms.Form):
+    pk = forms.IntegerField(
+        widget=forms.TextInput(),
+        label='Job pK:',
+    )
+
     title = forms.CharField(
         widget=forms.TextInput(),
         label='Job Title:',

@@ -16,7 +16,7 @@
             <ul class="breadcrumb navbackground">
                 <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/main-menu/">Home</a></li>
                 <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/job/job-list/">Job Positions</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Job Details</li>
+                <li class="breadcrumb-item active" aria-current="page">{{ object.title }}</li>
             </ul>
         </nav>
         <div class="container">
@@ -58,7 +58,8 @@
                                 <h5>Work Time:</h5>
                                 <p class="left" style="color : rgba(150, 144, 144, 0.63)">{{ object.get_full_work_time }}</p>
                             </div>
-                            <!--If the request for "Company Person" responded , this part would be shown.-->
+
+                            {% if user.person %}
                             <div>
                                 <hr style="background-color: rgb(233, 180, 8);">
                                 <hr style="background-color: rgb(233, 180, 8);">
@@ -71,8 +72,9 @@
                                     </div>
                                 </div>
                             </div>
+                        {% endif %}
 
-                            <!--If the request for "Company Person" responded , this part would be shown.-->
+                            {% if user.company %}
                             <div>
                                 <hr style="background-color: rgb(233, 180, 8);">
                                 <hr style="background-color: rgb(233, 180, 8);">
@@ -80,8 +82,9 @@
                                 <a href="../UpdateOrDeleteJob/UpdateOrDeleteJob.html" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Applications</a>
                                 <br><br>
                                 <p class="left" style="color : rgba(150, 144, 144, 0.63)">You can update or delete this AD!</p>
-                                <a href="../UpdateOrDeleteJob/UpdateOrDeleteJob.html" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Update or Delete</a>
+                                <a href="http://127.0.0.1:8000/job/job-update/{{ object.id }}" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Update or Delete</a>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
