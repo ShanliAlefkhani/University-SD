@@ -7,11 +7,6 @@ from job.serializers.job import JobSerializer
 from user.models import Company
 
 
-class JobCreate(generics.CreateAPIView):
-    queryset = Job.objects.all()
-    serializer_class = JobSerializer
-
-
 def job_create(request):
     if request.user.is_anonymous:
         return redirect('http://127.0.0.1:8000/')

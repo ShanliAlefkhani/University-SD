@@ -67,19 +67,17 @@
                                     <h5>Apply</h5>
                                     <p class="left" style="color : rgba(150, 144, 144, 0.63)">If you are interesting in this position you can apply for it.</p>
                                     <br>
-                                    <div class="col-sm-10 col-sm-offset-2">
-                                        <button type="submit" class="btn btn-primary button">Apply</button>
-                                    </div>
+                                    <a href="http://127.0.0.1:8000/job/apply/{{ object.id }}/" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Apply</a>
                                 </div>
                             </div>
-                        {% endif %}
+                            {% endif %}
 
                             {% if user.company %}
                             <div>
                                 <hr style="background-color: rgb(233, 180, 8);">
                                 <hr style="background-color: rgb(233, 180, 8);">
                                 <p class="left" style="color : rgba(150, 144, 144, 0.63)">You can check this job applications list</p>
-                                <a href="../UpdateOrDeleteJob/UpdateOrDeleteJob.html" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Applications</a>
+                                <a href="http://127.0.0.1:8000/job/job-applications/{{ object.id }}/" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Applications</a>
                                 <br><br>
                                 <p class="left" style="color : rgba(150, 144, 144, 0.63)">You can update or delete this AD!</p>
                                 <a href="http://127.0.0.1:8000/job/job-update/{{ object.id }}" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Update or Delete</a>

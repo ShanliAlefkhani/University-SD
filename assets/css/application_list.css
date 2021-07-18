@@ -1,0 +1,91 @@
+body{
+    margin-top:20px;
+    color: #fff;
+    text-align: left !important;
+    background: #181818;
+}
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 2px 5px 0 rgb(219, 169, 5), 0 1.5px 4px 0 rgba(219, 169, 5, 0.322);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(17, 16, 16);
+    background-clip: border-box;
+    border: 0 solid rgb(0, 0, 0);
+    border-radius: .25rem;
+}
+
+.card-info{
+    width: 100%;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+.navbackground {
+    background: #272727 !important;
+}
+.navbackground a{
+    background: #272727 !important;
+}
+.mycolor a{
+    color: rgb(233, 180, 8) !important;
+}
+.mycolor a:hover{
+    color: rgb(230, 228, 224) !important;
+}
+.mycolor {
+    color: rgb(233, 180, 8) !important;
+}
+.mybackground {
+    background: rgb(17, 16, 16) !important;
+}
+
+#app-table{
+    margin: 20px;
+    width: 96%;
+}
+#app-table th{
+    border: 1px solid rgb(233, 180, 8);
+    padding: 5px;
+    font-size: larger;
+    color: rgb(247, 213, 102);
+    background-color: black;
+}
+#app-table td{
+    border: 1px solid rgb(233, 180, 8);
+    padding: 5px;
+    color: antiquewhite;
+}
+#app-table tr:nth-child(even){
+    background-color: #272727;
+}
+#app-table tr:nth-child(odd){
+    background-color: #3b3838;
+}
+#app-table a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+#app-table a:active{
+    color: antiquewhite;
+    text-decoration: none;
+}
+#app-table a:visited{
+    color: antiquewhite;
+    text-decoration: none;
+}
+#app-table a:hover{
+    color: rgb(245, 207, 158);
+    text-decoration: none;
+}

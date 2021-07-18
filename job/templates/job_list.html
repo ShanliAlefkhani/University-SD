@@ -64,7 +64,7 @@
 {#                            </div>#}
 {#                        </form>#}
                         <div class="filter-result">
-                            <!--If Company-->
+                            {% if user.company %}
                             <div>
                                 <br>
                                 <p style="color: gray;">You can create a job position for finding a teammate :)</p>
@@ -74,7 +74,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--til here-->
+                            {% endif %}
                             <br>
                             <hr style="background-color: rgba(255, 215, 82, 0.808);">
                             <div class="row text-left">
