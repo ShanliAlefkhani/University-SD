@@ -83,16 +83,27 @@ body{
     font-size: 12px;
     align-items: center;
 }
+.button:disabled{
+    background: rgb(109, 108, 105) !important;
+    color: rgb(17, 16, 16) !important;
+    border: 0px;
+    margin: 5px;
+    padding: 8px 8px;
+    border-radius: 50px;
+    width: 15%;
+    display: block;
+    cursor: cell;
+    font-size: 12px;
+    align-items: center;
+}
 .button:hover{
     background: rgb(240, 199, 67);
     color: rgb(17, 16, 16) !important;
-    border: 2px solid black;
     padding: 8px 8px;
     margin: 5px;
     border-radius: 50px;
     width: 15%;
     display: block;
-    cursor: pointer;
     font-size: 12px;
 }
 ::-webkit-scrollbar {

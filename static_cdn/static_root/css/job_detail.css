@@ -1,0 +1,178 @@
+body{
+    margin-top:20px;
+    color: #fff;
+    text-align: left !important;
+    background: #181818;
+}
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 2px 5px 0 rgb(219, 169, 5), 0 1.5px 4px 0 rgba(219, 169, 5, 0.322);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(17, 16, 16);
+    background-clip: border-box;
+    border: 0 solid rgb(0, 0, 0);
+    border-radius: .25rem;
+}
+
+.card-info{
+    width: 100%;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+.button {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 0px;
+    padding: 8px 8px;
+    border-radius: 50px;
+    width: 20%;
+    display: block;
+    cursor: pointer;
+    font-size: 12px;
+}
+.tagbutton {
+    background: rgb(110, 109, 102);
+    border: 2px solid rgb(17, 16, 16);
+    padding: 4px 4px;
+    border-radius: 50px;
+    width: fit-content;
+    display: block;
+    cursor: pointer;
+    color:rgb(17, 16, 16);
+    font-size: 10px;
+}
+.tagbutton:hover{
+    background: rgb(233, 180, 8);
+    border: 2px solid rgb(17, 16, 16);
+    padding: 4px 4px;
+    border-radius: 50px;
+    width: fit-content;
+    display: block;
+    cursor: pointer;
+    color:rgb(17, 16, 16);
+    font-size: 10px;
+}
+.button:hover{
+    background: rgb(233, 180, 8);
+    color: #181818;
+    border: 2px solid black;
+    padding: 8px 8px;
+    border-radius: 50px;
+    width: 21%;
+    display: block;
+    cursor: pointer;
+    font-size: 12px;
+}
+.navbackground {
+    background: #272727 !important;
+}
+.navbackground a{
+    background: #272727 !important;
+}
+.mycolor a{
+    color: rgb(233, 180, 8) !important;
+}
+.mycolor a:hover{
+    color: rgb(230, 228, 224) !important;
+}
+.mycolor {
+    color: rgb(233, 180, 8) !important;
+}
+.mybackground {
+    background: rgb(17, 16, 16) !important;
+}
+.left{
+    text-align: left !important;
+}
+.panel {
+    box-shadow: none;
+  }
+  .panel-heading {
+    border-bottom: 0;
+  }
+  .panel-title {
+    font-size: 17px;
+    color: #f7f3f3;
+  }
+  .panel-body *:first-child {
+    margin-top: 0;
+  }
+  .panel-footer {
+    border-top: 0;
+  }
+
+  .panel-default > .panel-heading {
+      color: #333333;
+      background-color: transparent;
+      border-color: rgba(0, 0, 0, 0.07);
+  }
+
+  form label {
+
+      color: #999999;
+      font-weight: 400;
+      min-width: max-content;
+  }
+
+  .form-horizontal .form-group {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .der-input input {
+    width: 30%;
+    padding: 5px 7px;
+    border: 0px;
+    background: #181818;
+    border-radius: 50px;
+    border: 2px solid rgb(233, 180, 8);
+    transition: all .25s ease;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
+    color: #f7f3f3;
+}
+.der-input input:focus {
+    width: 30%;
+    padding: 5px 7px;
+    border: 0px;
+    background: #181818;
+    border-radius: 50px;
+    border: 2px solid rgb(233, 180, 8);
+    transition: all .25s ease;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.24);
+    color: #f7f3f3;
+}
+.der-input input::-webkit-file-upload-button {
+    background: rgb(233, 180, 8);
+    color: #fff;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 50px;
+}

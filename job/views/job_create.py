@@ -1,15 +1,10 @@
 from django.shortcuts import render, redirect
 from rest_framework import generics
 
-from job.forms.job_create import JobForm
+from job.forms.job import JobForm
 from job.models import Job
 from job.serializers.job import JobSerializer
 from user.models import Company
-
-
-class JobCreate(generics.CreateAPIView):
-    queryset = Job.objects.all()
-    serializer_class = JobSerializer
 
 
 def job_create(request):
@@ -27,6 +22,8 @@ def job_create(request):
         requirements = job_form.cleaned_data.get('requirements')
         salary = job_form.cleaned_data.get('salary')
         work_time = job_form.cleaned_data.get('work_time')
+        location = job_form.cleaned_data.get('location')
+        field = job_form.cleaned_data.get('field')
 
         company = Company.objects.get(user=request.user)
 
@@ -37,6 +34,8 @@ def job_create(request):
             requirements=requirements,
             salary=salary,
             work_time=work_time,
+            location=location,
+            field=field,
         )
 
         return redirect("http://127.0.0.1:8000/job/job-list/")

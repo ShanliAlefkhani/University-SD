@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Update or Delete Job</title>
+        <title>Update Job</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="keywords" content="Tutorial, Programming">
@@ -15,9 +15,9 @@
         <nav aria-label="breadcrumb" class="main-breadcrumb navbackground">
             <ul class="breadcrumb navbackground">
                 <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/user/main-menu/">Home</a></li>
-                <li class="breadcrumb-item mycolor"><a href="../JobList/JobList.html">Job Positions</a></li>
-		        <li class="breadcrumb-item mycolor"><a href="../JobDetails/JobDetails.html">Job Details</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Update or Delete Job</li>
+                <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/job/job-list/">Job Positions</a></li>
+		        <li class="breadcrumb-item mycolor"><a href="http://127.0.0.1:8000/job/job-detail/{{ job_form.initial.pk }}/">Detail</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Update</li>
             </ul>
         </nav>
         <div class="container">
@@ -65,6 +65,18 @@
                                     </label>
                                     <div class="col-sm-10">
                                         {{ job_form.work_time }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ job_form.location.id_for_label }}">
+                                        {{ job_form.location.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ job_form.location }}
+                                    </div>
+                                    <label class="col-sm-2 control-label" for="{{ job_form.field.id_for_label }}">
+                                        {{ job_form.field.label }}
+                                    </label>
+                                    <div class="col-sm-10">
+                                        {{ job_form.field }}
                                     </div>
                                 </div>
                             </div>
