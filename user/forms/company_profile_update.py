@@ -1,6 +1,5 @@
 from django import forms
 
-from user.models import Company
 
 class CompanyProfileUpdateForm(forms.Form):
     name = forms.CharField(

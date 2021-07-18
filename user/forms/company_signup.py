@@ -44,5 +44,5 @@ class CompanySignUpForm(forms.Form):
 
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={'placeholder': 'Enter Password'}),
-        label='Password'
+        label='Password',
     )
