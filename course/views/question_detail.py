@@ -15,6 +15,7 @@ class QuestionDetailView(DetailView):
         course = Person.objects.get(user=request.user).courses.first()
         # if course.last_answered_question < kwargs["pk"]:
         #     return redirect('http://127.0.0.1:8000/course/question-detail/{}'.format(course.last_answered_question))
-        course.last_answered_question = kwargs["pk"]
-        course.save()
+        if course.last_answered_question < kwargs['pk']:
+            course.last_answered_question = kwargs['pk']
+            course.save()
         return super(QuestionDetailView, self).get(request, args, kwargs)
