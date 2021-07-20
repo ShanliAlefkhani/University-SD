@@ -64,7 +64,7 @@ body{
   .chapter-detail .chapter-content {
     padding: 30px 30px 50px 30px;
   }
-  
+
   .chapter {
     clear: both;
     margin : 10px;
@@ -127,29 +127,42 @@ body{
     display: block;
     cursor: pointer;
     font-size: 12px;
+    align-items: center;
+}
+.viewbutton:disabled{
+  background: rgb(109, 108, 105) !important;
+  color: rgb(17, 16, 16) !important;
+  border: 0px;
+  padding: 5px 5px;
+  border-radius: 2px;
+  width: 100%;
+  display: block;
+  cursor: cell;
+  font-size: 12px;
+  align-items: center;
 }
 .viewbutton:hover{
     background: rgb(228, 193, 89);
     color: #181818;
-    border: 1px solid rgb(14, 13, 13);
+    border: 0;
     padding: 5px 5px;
     border-radius: 2px;
     width: 100%;
     display: block;
-    cursor: pointer;
     font-size: 12px;
+    align-items: center;
 }
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 1px grey; 
+  box-shadow: inset 0 0 1px grey;
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(233, 180, 8); 
+  background: rgb(233, 180, 8);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(233, 180, 8); 
+  background: rgb(233, 180, 8);
 }

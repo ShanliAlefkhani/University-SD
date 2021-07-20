@@ -10,6 +10,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <link href={% static "css/course_detail.css"%} rel="stylesheet" type="text/css">
+        <script src={% static "js/course_detail.js"%}></script>
         <link href="http://127.0.0.1:8000/media/puzzle.png" rel="icon">
     </head>
     <body>
@@ -39,13 +40,18 @@
                                         <p><i>Number of lessons: </i><span class="mycolor">{{ chapter.lessons.count }}</span></p>
                                     </div>
                                     <div class="m-t text-righ">
-                                        <a href="http://127.0.0.1:8000/course/chapter-detail/{{ chapter.id }}" class="btn btn-xs btn-outline btn-primaryv viewbutton">Info <i class="fa fa-long-arrow-right"></i> </a>
+                                        <button onclick="location.href='http://127.0.0.1:8000/course/chapter-detail/{{ chapter.id }}'" class="viewbutton" id="nextChapter{{ chapter.id }}" disabled>Info <i class="fa fa-long-arrow-right"></i></button>
                                     </div>
+                                    <script>
+                                        if ('{{ chapter.id }}' <= '{{ last_chapter }}') {
+                                            document.getElementById("nextChapter{{ chapter.id }}").disabled = false;
+                                        }
+                                    </script>
                                 </div>
                             </div>
-                        </div>    
+                        </div>
                     </div>
-                {% endfor %}    
+                {% endfor %}
             </div>
         </div>
     </body>
