@@ -22,3 +22,5 @@ class CourseDetailView(DetailView):
             if last_answered_question < number_of_questions:
                 context['last_chapter'] = chapter.id
                 return context
+        context['last_chapter'] = 4
+        return context

@@ -7,6 +7,7 @@ class JobForm(forms.Form):
     pk = forms.IntegerField(
         widget=forms.TextInput(),
         label='Job pK',
+        required=False
     )
 
     title = forms.CharField(
