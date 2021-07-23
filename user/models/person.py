@@ -30,3 +30,11 @@ class Person(models.Model):
     @property
     def get_first_course(self):
         return self.courses.first()
+
+    @property
+    def get_full_gender(self):
+        if self.work_time == 'F':
+            return 'Female'
+        elif self.work_time == 'M':
+            return 'Male'
+        return 'Other'
