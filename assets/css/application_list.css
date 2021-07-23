@@ -89,3 +89,22 @@ body{
     color: rgb(245, 207, 158);
     text-decoration: none;
 }
+::selection {
+    color: #272727;
+    background: rgb(245, 207, 83);
+    border-radius: 30px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey; 
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(233, 180, 8); 
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(233, 180, 8); 
+  }

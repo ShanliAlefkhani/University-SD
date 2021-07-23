@@ -32,7 +32,7 @@
                                             <p class="text-secondary mb-1">Developer</p>
                                             <br>
                                             <hr style="background-color: rgb(233, 180, 8);">
-                                            <div class="d-flex flex-column" style="width: 300px; height:200px; padding: 2px; font-size: 12px;">
+                                            <div class="d-flex flex-column" style="width: 300px; height:200px; padding: 2px; font-size: 12px; margin-left: 40px;">
                                                 <div class="row text-left">
                                                     <div class="col-sm-3">
                                                         <p class="mb-0">Email</p>
@@ -59,7 +59,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="btn btn-primary button"><a href="http://127.0.0.1:8000/user/person-profile-update/">Update Profile</a></button>
+                                        <button class="button"><a href="http://127.0.0.1:8000/user/person-profile-update/">Update Profile</a></button>
                                         <br>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
                                             <h6 class="mb-0">Gender</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <h6>{{ person.gender}}</h6>
+                                            <h6>{{ person.get_full_gender}}</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -116,14 +116,6 @@
                                             <small>{{ person.get_first_course.base_coursefeat.name }}</small>
                                             <div class="progress mb-3" style="height: 5px">
                                                 <div class="progresscolor progress-bar bg-primary" role="progressbar" style="width: {{ person.get_first_course.status }}%" aria-valuenow={{ person.get_first_course.status }} aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-{#                                            <small>Tutorial 2</small>#}
-{#                                            <div class="progress mb-3" style="height: 5px">#}
-{#                                                <div class="progresscolor progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>#}
-{#                                            </div>#}
-{#                                            <small>Tutorial 3</small>#}
-{#                                            <div class="progress mb-3" style="height: 5px">#}
-{#                                                <div class="progresscolor progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>#}
                                             </div>
                                         </div>
                                     </div>

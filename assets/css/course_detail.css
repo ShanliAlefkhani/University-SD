@@ -152,17 +152,22 @@ body{
     font-size: 12px;
     align-items: center;
 }
+::selection {
+  color: #272727;
+  background: rgb(245, 207, 83);
+  border-radius: 30px;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 1px grey;
+  box-shadow: inset 0 0 1px grey; 
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(233, 180, 8);
+  background: rgb(233, 180, 8); 
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(233, 180, 8);
+  background: rgb(233, 180, 8); 
 }

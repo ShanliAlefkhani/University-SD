@@ -169,6 +169,11 @@ a:active {
 .mybackground {
     background: rgb(17, 16, 16) !important;
 }
+::selection {
+    color: #272727;
+    background: rgb(245, 207, 83);
+    border-radius: 30px;
+}
 ::-webkit-scrollbar {
     width: 10px;
 }
