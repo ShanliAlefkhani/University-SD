@@ -33,8 +33,8 @@ class Person(models.Model):
 
     @property
     def get_full_gender(self):
-        if self.work_time == 'F':
+        if self.gender == 'F':
             return 'Female'
-        elif self.work_time == 'M':
+        elif self.gender == 'M':
             return 'Male'
         return 'Other'

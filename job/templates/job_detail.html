@@ -67,7 +67,7 @@
                                     <h5>Apply</h5>
                                     <p class="left" style="color : rgba(150, 144, 144, 0.63)">If you are interesting in this position you can apply for it.</p>
                                     <br>
-                                    <a href="http://127.0.0.1:8000/job/apply/{{ object.id }}/" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Apply</a>
+                                    <button conclick="Location.href='http://127.0.0.1:8000/job/apply/{{ object.id }}/'" style="text-decoration: none; color: #fff;" class="button">Apply</button>
                                 </div>
                             </div>
                             {% endif %}
@@ -77,10 +77,10 @@
                                 <hr style="background-color: rgb(233, 180, 8);">
                                 <hr style="background-color: rgb(233, 180, 8);">
                                 <p class="left" style="color : rgba(150, 144, 144, 0.63)">You can check this job applications list</p>
-                                <a href="http://127.0.0.1:8000/job/job-applications/{{ object.id }}/" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Applications</a>
+                                <button onclick="location.href='http://127.0.0.1:8000/job/job-applications/{{ object.id }}/'" style="text-decoration: none; color: #fff;" class="button">Applications</button>
                                 <br><br>
-                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">You can update or delete this AD!</p>
-                                <a href="http://127.0.0.1:8000/job/job-update/{{ object.id }}" style="text-decoration: none; color: #fff;" class="btn btn-primary button">Update or Delete</a>
+                                <p class="left" style="color : rgba(150, 144, 144, 0.63)">You can update this AD!</p>
+                                <button onclick="location.href='http://127.0.0.1:8000/job/job-update/{{ object.id }}'" style="text-decoration: none; color: #fff;" class="button">Update</button>
                             </div>
                             {% endif %}
                         </div>

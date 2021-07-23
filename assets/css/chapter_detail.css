@@ -228,6 +228,11 @@ body{
     cursor: pointer;
     font-size: 12px;
 }
+::selection {
+  color: #272727;
+  background: rgb(245, 207, 83);
+  border-radius: 30px;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
